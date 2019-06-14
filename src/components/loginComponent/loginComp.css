@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    font-family: arial;
+}
+.login-background{
+    width: 100%;
+    background: url('loginback.jpg') no-repeat local;
+    background-size: cover;
+    padding-bottom: 300px;
+    padding-top: 200px;
+}
+.login-card{
+    width:600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    height: 350px;
+    text-align: center;
+
+}
+.login-card img{
+    width: 200px;
+}
+.login-card input[type="button"]{
+    background-color: #ff0000;
+    border:none;
+    padding: 10px 5px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
