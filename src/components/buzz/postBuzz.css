@@ -1,6 +1,7 @@
 .buzz-create{
     padding: 10px;
     font-family: Roboto;
+    max-width: 500px;
 }
 input {
     padding: 5px;

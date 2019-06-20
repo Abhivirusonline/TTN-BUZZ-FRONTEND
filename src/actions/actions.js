@@ -1,4 +1,4 @@
-import {CREATE_BUZZ,FETCH_BUZZ,DELETE_BUZZ,REACT_BUZZ,RESOLVE_COMPLAINT,FILE_COMPLAINT,ASSIGN_COMPLAINT,USER_LOGIN} from "./actionTypes";
+import {CREATE_BUZZ,FETCH_BUZZ,DELETE_BUZZ} from "./actionTypes";
 import axiosInstance from "../utilities/axiosInterceptor";
 import constant from '../config/constants';
 
@@ -44,4 +44,4 @@ export const deleteBuzz=(id)=>dispatch=>{
                 payload:res.data
             });
         }).catch(err=>console.log(err))
-    }
+}

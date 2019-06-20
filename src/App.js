@@ -7,8 +7,10 @@ import FetchLogin from "./fetchlogin";
 import Header from "./components/Header/Header";
 import axios from "axios";
 import PostBuzz from './components/buzz/postBuzz';
+import Buzz from "./components/buzz/Buzz";
+import Profile from './components/dashboard/profile';
 import constant from "./config/constants";
-
+import Complaints from "./components/complaints/complaints";
 class App extends Component{
     constructor(props) {
         super(props);
@@ -65,7 +67,9 @@ class App extends Component{
          {/*       )}*/}
          {/*     />*/}
          {/* </Router>*/}
+         <Profile/>
          <PostBuzz/>
+         <Buzz/>
         </div>
     );
   }
