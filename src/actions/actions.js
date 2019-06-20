@@ -1,5 +1,5 @@
 import {CREATE_BUZZ,FETCH_BUZZ,DELETE_BUZZ,REACT_BUZZ,RESOLVE_COMPLAINT,FILE_COMPLAINT,ASSIGN_COMPLAINT,USER_LOGIN} from "./actionTypes";
-import axios from 'axios';
+import axiosInstance from "../utilities/axiosInterceptor";
 import constant from '../config/constants';
 
 export const displayBuzz=(data)=>({
@@ -7,49 +7,34 @@ export const displayBuzz=(data)=>({
     payload:data
 });
 
-export const fetchbuzz=()=>{
-    let token=localStorage.getItem(('token'));
-    console.log("fetch buzz function called");
-    return  dispatch=>{
-        axios.get(constant.buzzAPI,{
-            headers:{
-                "authorization":token
-            }
-        })
+export const fetchbuzz=()=>dispatch=>{
+    axiosInstance.get(constant.buzzAPI)
             .then(res=>{
                 dispatch(displayBuzz(res.data));
             }).catch(err=>{
-                console.log('err in axios'+err);
+                console.log('fetch operation failed : '+err);
         })
-    }
 };
 
-export const saveBuzz=(data)=>{
-    let token=localStorage.getItem(('token'));
-    console.log('save post to db via frontend');
-    return dispatch=>{
-        axios.post(constant.buzzAPI,{
-            headers:{
-                "authorization":token
-            },
-            body:{
-                data
-            }
-
+export const saveBuzz=formData=>dispatch=>{
+        axiosInstance({
+            method:'post',
+            url:constant.buzzAPI,
+            data:formData,
+            config:{ headers:{'Content-Type':'multipart/form-data'}}
         }).then(res=>{
+            console.log("data saved on server and now dispatch to save in store");
             dispatch({
                 type: CREATE_BUZZ,
                 payload:res.data
             });
         }).catch(err=>{
-            console.log(err);
+            console.log("action error to save buzz on server"+err);
         })
-    }
 };
 
-export const deleteBuzz=(id)=>{
-    return dispatch=>{
-        axios.delete(constant.buzzAPI,{
+export const deleteBuzz=(id)=>dispatch=>{
+        axiosInstance.delete(constant.buzzAPI,{
             body:{
                 _id:id
             }
@@ -60,4 +45,3 @@ export const deleteBuzz=(id)=>{
             });
         }).catch(err=>console.log(err))
     }
-}
