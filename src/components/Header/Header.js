@@ -6,11 +6,11 @@ const Header=(props)=>{
     console.log("props is :"+props.isAdmin);
     return(
         <nav>
-            <Link to={"./dashboard"}>Buzz</Link>
-            <Link to={"./complaints"}>Complaints</Link>
+            <Link to={"../dashboard"}>Buzz</Link>
+            <Link to={"../complaints"}>Complaints</Link>
             <Link to={"../resolve"}>Resolve</Link>
-            <Link to={"./settings"}>Settings</Link>
-            <Link to={'./logout'}>Logout</Link>
+            <Link to={"../settings"}>Settings</Link>
+            <a href={'http://localhost:3000/auth/logout'}>Logout</a>
         </nav>
     );
 }

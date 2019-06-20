@@ -1,7 +1,9 @@
 import React,{Component} from "react";
 import 'typeface-roboto';
 import {Button ,Box} from '@material-ui/core';
-class CreateBuzz extends Component{
+import {connect} from "react-redux";
+import {saveBuzz} from '../../actions/actions';
+class Buzz extends Component{
     constructor(props) {
         super(props);
 
@@ -18,5 +20,13 @@ class CreateBuzz extends Component{
         );
     }
 }
+const mapStateToProps=(state)=>{
+    return{
+        user:state.user
+    };
+}
+const mapDispatchToProps={
+    saveBuzz
+}
 
-export default CreateBuzz;
+export default connect()(Buzz);
