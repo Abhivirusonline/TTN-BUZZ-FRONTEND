@@ -1,10 +1,18 @@
-import {FILE_COMPLAINT,FETCH_COMPLAINT} from "../actions/actionTypes";
+import {FILE_COMPLAINT,FETCH_COMPLAINT,FETCH_DEPARTMENT} from "../actions/actionTypes";
 
-const inititalState={
-    complaintList:[]
+const initialState={
+    complaintList:[{
+        _id:'',
+        department:{},
+        issueTitle:'',
+        concern:'',
+        RaisedBy:{},
+        attachment: '',
+        assignedTo:'',
+    }]
 }
 
-const complaintReducer=(state=inititalState,action)=>{
+const complaintReducer=(state=initialState,action)=>{
     switch (action.type) {
         case FILE_COMPLAINT:{
             return{...state,complaintList: [...state.complaintList,action.payload]}

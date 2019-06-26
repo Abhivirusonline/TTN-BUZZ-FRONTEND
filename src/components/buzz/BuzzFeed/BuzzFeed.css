@@ -1,0 +1,80 @@
+.buzz-feed{
+    width: 500px;
+    margin: 50px auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: 0.3s;
+}
+.buzz-feed:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.buzz-header{
+    background-color: #fff;
+    padding: 16px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid #ccc;
+}
+.buzz-header div img{
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    height: 40.7px;
+    max-width: 40px;
+}
+.buzz-header div span:first-child:hover{
+    color: blue;
+}
+.buzz-header div span:first-child{
+    color: rgba(0,0,0,0.87);
+    cursor: pointer;
+}
+.buzz-header div span:last-child{
+    color: rgba(0,0,0,0.54);
+}
+
+.buzz-content{
+    padding: 5px 16px;
+}
+.buzz-content div p{
+    font-weight: normal;
+    font-family: Roboto;
+    font-size: 14px;
+    padding: 5px;
+    text-align: left;
+    direction: ltr;
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+.buzz-attachment{
+    padding-right: 25px;
+    padding-left: 25px;
+}
+.buzz-content img{
+    width: 100%;
+    max-height: fit-content;
+    border-radius: 5px;
+}
+.buzz-footer{
+    padding: 2px 16px;
+    border-top: 1px solid #ccc;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.buzz-footer div{
+    text-align: center;
+}
+.buzz-footer div i{
+    color: #308bff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.buzz-footer div:hover{
+    background-color: #cccccc;
+    cursor: pointer;
+}
+.delete-btn{
+    box-sizing: border-box;
+    padding-left: 10px;
+}

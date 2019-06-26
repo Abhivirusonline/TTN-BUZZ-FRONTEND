@@ -9,5 +9,7 @@ export const fetchUser=()=>dispatch=>{
                 type:FETCH_USER,
                 payload:res.data
             });
-        })
+        }).catch(err=>{
+       console.log("-------> err"+err);
+    });
 }

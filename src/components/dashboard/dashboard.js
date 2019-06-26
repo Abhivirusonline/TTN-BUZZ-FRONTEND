@@ -1,36 +1,46 @@
 import React,{Component} from "react";
+import "./dashboard.css"
 import {BrowserRouter as Router,Link,Route,Switch,Redirect} from "react-router-dom";
-import Profile from "./profile";
-import axios from "axios";
-import constant from '../../config/constants';
-import CreateBuzz from "../buzz/Buzz";
+import Buzz from "../buzz/Buzz";
+import Header from "../Header/Header";
+import {connect} from "react-redux";
+import Complaints from "../complaints/complaints";
+import Resolve from "../resolve/resolve";
+import SideNav from "../sidenav/sidenav";
+import {fetchUser} from "../../actions/user.actions";
 
-class Dashboard extends Component{
+
+class Dashboard extends Component {
     constructor(props) {
         super(props);
     }
-    componentWillMount() {
-        let cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-        localStorage.setItem("token",cookieValue);
-    }
 
     componentDidMount() {
-
+        this.props.fetchUser();
     }
+
     render() {
-        let {isAuth,loading}=this.props.state;
-        return(loading?
-                <h2 onLoad={this.props.state.handleLogin}>Loading......</h2>
-                :
-                isAuth?
-                <div>
-                    <Profile user={this.props.state.user}/>
-                    <CreateBuzz/>
-                </div>
-                 :
-                 <Redirect to={'./login'}/>
+
+        console.log("props in dashboard :"+this.props);
+        const {match} = this.props;
+        console.log('match inside dashboard component',match.path);
+        return (
+            <div className={"dashboard"}>
+                <Header history={this.props.history} isAdmin={this.props.user.isAdmin}/>
+                <SideNav/>
+                <Route exact path ={`${match.path}/`} component={Buzz} />
+                <Route exact path ={`${match.path}/buzz`} component ={Buzz}/>
+                <Route exact path ={`${match.path}/complaints`} component ={Complaints}/>
+                <Route exact path ={`${match.path}/resolve`} component ={Resolve}/>
+
+            </div>
         );
     }
 }
-
-export default Dashboard;
+const mapStateToProps=state=>{
+    return {user:state.userReducer.userData}
+}
+const mapDispatchToProps={
+    fetchUser
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Dashboard);

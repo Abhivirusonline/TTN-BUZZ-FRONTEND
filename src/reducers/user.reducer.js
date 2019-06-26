@@ -1,15 +1,16 @@
 import {FETCH_USER} from "../actions/actionTypes";
 
 const initialState={
-    userData:[{
-        username:'',
-        role:''
-    }]
+    userData:{
+        _id:'',
+        displayName:'',
+        isAdmin:false
+    }
 }
 const userReducer=(state=initialState,action)=>{
     switch (action.type) {
         case FETCH_USER:{
-            return{...state,userData:[...state.userData,action.payload]};
+            return {...state, userData :action.payload} ;
         }
         default:{
             return state;
@@ -17,3 +18,4 @@ const userReducer=(state=initialState,action)=>{
     }
 }
 export default userReducer;
+

@@ -1,12 +1,12 @@
 import axiosInstance from "../utilities/axiosInterceptor";
-import {FILE_COMPLAINT,FETCH_COMPLAINT} from "./actionTypes";
+import {FILE_COMPLAINT, FETCH_COMPLAINT,  FETCH_DEPARTMENT,FETCH_ISSUETYPE} from "./actionTypes";
 import constant from '../config/constants';
 
-export const fileComplaint=complaintData=>dispatch=>{
+export const fileComplaint=formData=>dispatch=>{
     axiosInstance({
         method:'post',
         url:constant.complaintAPI,
-        data:complaintData,
+        data:formData,
         config:{headers:{'Content-Type':'multipart/form-data'}}
     }).then(res=>{
         dispatch({
@@ -14,6 +14,31 @@ export const fileComplaint=complaintData=>dispatch=>{
             payload:res.data
         });
     })
+}
+
+export const fetchDepartment=()=>dispatch=>{
+    axiosInstance.get(constant.departmentAPI)
+        .then(res=> {
+            dispatch({
+                type: FETCH_DEPARTMENT,
+                payload: res.data
+            })
+        })
+        .catch(err=>{
+            console.log(err);
+        })
+}
+export const fetchIssueType=()=>dispatch=>{
+    axiosInstance.get(constant.issueTypeAPI)
+        .then(res=>{
+            dispatch({
+                type:FETCH_ISSUETYPE,
+                payload:res.data
+            })
+        })
+        .catch(err=>{
+            console.log("error in issutytpe fetch : "+err)
+        })
 }
 
 export const showComplaintList=()=>dispatch=>{

@@ -1,8 +1,10 @@
 module.exports={
-    url:"http://localhost:3000/auth/google",
+    AuthURL:"http://localhost:3000/auth/google",
     profileAPI:'http://localhost:3000/users',
     buzzAPI:'http://localhost:3000/buzzes',
+    buzzLike:'http://localhost:3000/buzzes/like',
+    buzzDisLike:'http://localhost:3000/buzzes/dislike',
     complaintAPI:'http://localhost:3000/complaints',
+    departmentAPI:'http://localhost:3000/complaints/departments',
     myComplaintAPI:'http://localhost:3000/complaints/mycomplaints',
-
 }
