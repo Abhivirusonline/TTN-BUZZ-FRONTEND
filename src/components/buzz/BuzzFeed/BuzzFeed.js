@@ -1,29 +1,15 @@
 import React,{Component} from "react";
 import "./BuzzFeed.css";
 import 'typeface-roboto';
-import {Button ,Box} from '@material-ui/core';
+import {getTimeDifference} from "../../utilities/buzzTiming";
 import {connect} from "react-redux";
 import {fetchUser} from "../../../actions/user.actions";
 import {fetchbuzz,deleteBuzz,like,dislike} from '../../../actions/buzz.actions';
 
 class BuzzFeed extends Component{
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         this.props.fetchUser();
-        console.log("hererere");
         this.props.fetchbuzz();
-    }
-    handleBuzzDelete=(e)=>{
-       this.props.deleteBuzz(e.target.id);
-    }
-    handleLike=(e)=>{
-        this.props.like(e.target.id);
-    }
-    handleDisLike=(e)=>{
-        this.props.dislike(e.target.id);
     }
     handleComment=(e)=>{
         alert("COMMENT : "+e.target.id);
@@ -50,14 +36,15 @@ class BuzzFeed extends Component{
                             </span>
                                 <span>
                                 {
-                                    createdAt
+                                    //parseInt((Date.now() - new Date(createdAt))/(1000*60))
+                                    getTimeDifference(createdAt)
                                 }
                             </span>
                             </div>
                             {
                                 postedBy._id === user._id ?
                                     <div id={buzzId} className={"col-lg-2 col-xs-2 col-sm-2 col-md-2 delete-btn"}
-                                         onClick={(e) => this.handleBuzzDelete(e)}>
+                                         onClick={this.props.deleteBuzz}>
                                         <button id={buzzId} type="button" className="close">&times;</button>
                                     </div>
                                     : null
@@ -78,11 +65,11 @@ class BuzzFeed extends Component{
                         </section>
                         <div className={"buzz-footer row"}>
                             <div className={"col-lg-4 col-md-4 col-sm-4 col-xs-4"} id={buzzId}
-                                 onClick={this.handleLike}>
+                                 onClick={this.props.like}>
                                 <i className="far fa-thumbs-up" id={buzzId}>{like.length}</i>
                             </div>
                             <div className={"col-lg-4 col-md-4 col-sm-4 col-xs-4"} id={buzzId}
-                                 onClick={this.handleDisLike}>
+                                 onClick={this.props.dislike}>
                                 <i className="far fa-thumbs-down" id={buzzId}>{dislike.length}</i>
                             </div>
                             <div className={"col-lg-4 col-md-4 col-sm-4 col-xs-4"} id={buzzId}

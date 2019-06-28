@@ -16,9 +16,9 @@ export const fetchbuzz=()=>dispatch=>{
         })
 };
 
-export const like=(id)=>dispatch=>{
+export const like=(e)=>dispatch=>{
     axiosInstance.put(constant.buzzLike,{
-        data:{buzzId:id}
+        data:{buzzId:e.target.id}
         }
     ).then(res=>{
             dispatch({
@@ -31,9 +31,9 @@ export const like=(id)=>dispatch=>{
         })
 }
 
-export const dislike=(id)=>dispatch=>{
+export const dislike=(e)=>dispatch=>{
     axiosInstance.put(constant.buzzDisLike,{
-            data:{buzzId:id}
+            data:{buzzId:e.target.id}
         }
     ).then(res=>{
         dispatch({
@@ -47,7 +47,7 @@ export const dislike=(id)=>dispatch=>{
 }
 
 export const saveBuzz = formData => dispatch => {
-    console.log("buzz data is :"+formData.buzz);
+    console.log("form data inside save buzz :"+formData);
         axiosInstance({
             method:'post',
             url:constant.buzzAPI,
@@ -64,13 +64,12 @@ export const saveBuzz = formData => dispatch => {
         })
 };
 
-export const deleteBuzz=(id)=>dispatch=>{
-    console.log(" id in delelte actions is :"+id);
+export const deleteBuzz=(e)=>dispatch=>{
         axiosInstance({
             method:'delete',
             url:constant.buzzAPI,
             data:{
-                _id:id
+                _id:e.target.id
             }
         }).then(res=>{
             dispatch({

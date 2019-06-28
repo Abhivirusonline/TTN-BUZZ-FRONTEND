@@ -7,6 +7,7 @@ import {connect} from "react-redux";
 import Complaints from "../complaints/complaints";
 import Resolve from "../resolve/resolve";
 import SideNav from "../sidenav/sidenav";
+import Settings from "../settings/settings";
 import {fetchUser} from "../../actions/user.actions";
 
 
@@ -32,7 +33,7 @@ class Dashboard extends Component {
                 <Route exact path ={`${match.path}/buzz`} component ={Buzz}/>
                 <Route exact path ={`${match.path}/complaints`} component ={Complaints}/>
                 <Route exact path ={`${match.path}/resolve`} component ={Resolve}/>
-
+                <Route exact path={`${match.path}/settings`} component={Settings}/>
             </div>
         );
     }

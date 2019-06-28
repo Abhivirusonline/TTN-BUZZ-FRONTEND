@@ -1,8 +1,9 @@
 import axiosInstance from "../utilities/axiosInterceptor";
-import {FILE_COMPLAINT, FETCH_COMPLAINT,  FETCH_DEPARTMENT,FETCH_ISSUETYPE} from "./actionTypes";
+import {FILE_COMPLAINT, FETCH_COMPLAINT,FETCH_DEPARTMENT,UPDATE_COMPLAINT_STATUS} from "./actionTypes";
 import constant from '../config/constants';
 
 export const fileComplaint=formData=>dispatch=>{
+    console.log('form data in file complaint',formData);
     axiosInstance({
         method:'post',
         url:constant.complaintAPI,
@@ -16,6 +17,20 @@ export const fileComplaint=formData=>dispatch=>{
     })
 }
 
+export const updateComplaintStatus=e=>dispatch=>{
+    axiosInstance({
+        method:'patch',
+        url:constant.complaintAPI,
+        data:{complaintId:e.target.id, complaintStatus:e.target.value}
+        })
+        .then(res=>{
+            dispatch({
+                type:UPDATE_COMPLAINT_STATUS,
+                payload:res.data
+            });
+        })
+        .catch(err=>alert(err));
+}
 export const fetchDepartment=()=>dispatch=>{
     axiosInstance.get(constant.departmentAPI)
         .then(res=> {
@@ -26,18 +41,6 @@ export const fetchDepartment=()=>dispatch=>{
         })
         .catch(err=>{
             console.log(err);
-        })
-}
-export const fetchIssueType=()=>dispatch=>{
-    axiosInstance.get(constant.issueTypeAPI)
-        .then(res=>{
-            dispatch({
-                type:FETCH_ISSUETYPE,
-                payload:res.data
-            })
-        })
-        .catch(err=>{
-            console.log("error in issutytpe fetch : "+err)
         })
 }
 

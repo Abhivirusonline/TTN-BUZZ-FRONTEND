@@ -11,11 +11,15 @@ class BuzzForm extends Component{
     handleSubmit=(e)=>{
         e.preventDefault();
         const formData=new FormData();
-        formData.append('buzz',e.target[0].value);
-        formData.append('category',e.target[1].value);
-        formData.append('attachment',e.target[2].value);
-        console.log("in buzzzform 15______", formData);
-        this.props.saveBuzz(formData);
+        let buzz=e.target[0].value.trim();
+        let category=e.target[1].value;
+        if(buzz && category) {
+            formData.append('buzz', buzz);
+            formData.append('category', category);
+            if (e.target[2].value)
+                formData.append('attachment', e.target[2].files[0], 'attachment');
+            this.props.saveBuzz(formData);
+        }
         e.target.reset();
     }
     render() {
@@ -35,10 +39,7 @@ class BuzzForm extends Component{
                                 <label htmlFor="file-upload">
                                     <i className="far fa-image"></i>
                                 </label>
-
-
                                 <input type="file" name={"attachment"} id="file-upload" className={"attachment"}/>
-
                             </div>
                             <button type="submit" className="btn btn-success">
                                 <i className="fas fa-paper-plane"></i> Post

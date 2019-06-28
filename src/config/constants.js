@@ -1,6 +1,7 @@
 module.exports={
     AuthURL:"http://localhost:3000/auth/google",
     profileAPI:'http://localhost:3000/users',
+    getAllUser:'http://localhost:3000/users/all',
     buzzAPI:'http://localhost:3000/buzzes',
     buzzLike:'http://localhost:3000/buzzes/like',
     buzzDisLike:'http://localhost:3000/buzzes/dislike',

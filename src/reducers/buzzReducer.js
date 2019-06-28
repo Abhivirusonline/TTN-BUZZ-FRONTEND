@@ -7,7 +7,9 @@ const initialState={
             buzz:'',
             attachment:'',
             createAt:'',
-            postedBy:{},
+            postedBy:{
+                photoURL:'',
+            },
             like:[],
             dislike:[],
             comments:[]
@@ -17,7 +19,7 @@ const initialState={
 const buzzReducer=(state=initialState,action)=>{
     switch (action.type) {
         case CREATE_BUZZ:
-            const buzzList = [...state.buzzList,action.payload]
+            const buzzList = [action.payload,...state.buzzList]
             return{...state,buzzList}
         case FETCH_BUZZ:
             return{...state,buzzList:action.payload};

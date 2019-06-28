@@ -1,16 +1,15 @@
 import React,{Component} from "react";
 import "./complaints.css";
 import {fetchUser} from "../../actions/user.actions";
-import {fileComplaint,fetchDepartment} from "../../actions/complaints.action";
+import {fileComplaint,fetchDepartment,showComplaintList} from "../../actions/complaints.action";
 import {connect} from "react-redux";
 class Complaints extends Component{
     constructor(props) {
         super(props);
-
     }
-
     componentDidMount() {
         this.props.fetchUser();
+        this.props.showComplaintList();
         this.props.fetchDepartment();
     }
     handleSubmit=(e)=>{
@@ -21,7 +20,8 @@ class Complaints extends Component{
         formData.append('RaisedBy',e.target[2].value);
         formData.append('email',e.target[3].value);
         formData.append('concern',e.target[4].value);
-        formData.append('attachment',e.target[5].value);
+        if(e.target[5].value)
+            formData.append('attachment',e.target[5].files[0],'attachment');
         this.props.fileComplaint(formData);
         e.target.reset();
     }
@@ -48,11 +48,7 @@ class Complaints extends Component{
                     </div>
                     <div className={"col-xs-12 col-sm-6 col-md-6 col-lg-6 form-group"}>
                         <label htmlFor="issueTitle" className={"control-label"}>Issue Title</label>
-                        <select name="issueTitle" id="issueTitle" className={"form-control"}>
-                               <option value="Hardware">Hardware</option>
-                               <option value="Infra">Infra</option>
-                               <option value="Others">Others</option>
-                        </select>
+                        <input type={"text"} name="issueTitle" id="issueTitle" className={"form-control"} required/>
                     </div>
                 </div>
                 <div className={"myrow"}>
@@ -79,7 +75,7 @@ class Complaints extends Component{
                             <span>Attachment</span>
                             <i className="far fa-image"></i>
                         </label>
-                        <input type={"file"} id={"file-upload"} name="complaint_attachment" className={"form-control "}/>
+                        <input type={"file"} id={"file-upload"} name="attachment" className={"form-control "}/>
                     </div>
                     <div className={"col-xs-12 col-xs-offset-0 col-sm-3 col-sm-offset-9 col-lg-3 col-lg-offset-9 form-group"}>
                         <input type={"submit"} name="complaint-submit" id="complaint-submit" className={"form-control btn btn-primary"}/>
@@ -96,10 +92,8 @@ class Complaints extends Component{
                             <tr key={"first-row"}>
                                 <th>
                                     <select name="department" id="department" className={"form-control"}>
-                                        {
-                                            departmentList.map(department=>{
-                                                return(<option value={department._id}>{department.deptName}</option>)
-                                            })
+                                         {
+                                            departmentList.map(department=>(<option value={department._id}>{department.deptName}</option>))
                                         }
                                     </select>
                                 </th>
@@ -109,13 +103,15 @@ class Complaints extends Component{
                             <tbody>
                             {
                                 complaintList.map(complain=> {
-                                    return (<tr>
-                                        <td>{complain.department.deptName}</td>
-                                        <td style={{color:"blue"}}>{complain._id}</td>
-                                        <td>{complain.RaisedBy.displayName}</td>
-                                        <td>{complain.assignedTo}A</td>
-                                        <td>{complain.status}</td>
-                                    </tr>)
+                                    if(complain.RaisedBy._id===this.props.user._id)
+                                        return (<tr>
+                                            <td>{complain.department.deptName}</td>
+                                            <td style={{color:"blue"}}>{complain._id}</td>
+                                            <td>{complain.RaisedBy.displayName}</td>
+                                            <td>{complain.assignedTo.displayName}
+                                            </td>
+                                            <td className={complain.status}>{complain.status}</td>
+                                        </tr>)
                                 })
                             }
                             </tbody>
@@ -139,5 +135,6 @@ const mapDispatchToProps={
     fetchUser,
     fileComplaint,
     fetchDepartment,
+    showComplaintList
 }
 export default connect(mapStateToProps,mapDispatchToProps)(Complaints);

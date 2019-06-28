@@ -51,3 +51,12 @@ textarea{
 .file-upload label span{
     padding-right: 10px;
 }
+.Resolved{
+    color: #00ff00;
+}
+.In-Progress{
+    color: #1a16af;
+}
+.PENDING{
+    color: #f00;
+}
