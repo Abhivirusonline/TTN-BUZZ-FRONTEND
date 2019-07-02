@@ -5,9 +5,6 @@ import {fileComplaint,fetchDepartment,showComplaintList} from "../../actions/com
 import {connect} from "react-redux";
 import DetailComp from "./detailComp";
 class Complaints extends Component{
-    constructor(props) {
-        super(props);
-    }
     componentDidMount() {
         this.props.fetchUser();
         this.props.showComplaintList();
@@ -105,6 +102,8 @@ class Complaints extends Component{
                                     {
                                        return <DetailComp complaint={complain}/>
                                     }
+                                    //returning true for the sake of warning
+                                    return true;
                                 })
                             }
                             </tbody>

@@ -4,10 +4,6 @@ import {saveBuzz} from '../../../actions/buzz.actions';
 import { connect } from 'react-redux';
 
 class BuzzForm extends Component{
-    constructor(props) {
-        super(props);
-
-    }
     handleSubmit=(e)=>{
         e.preventDefault();
         const formData=new FormData();

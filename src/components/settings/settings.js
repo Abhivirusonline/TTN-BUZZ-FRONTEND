@@ -4,10 +4,6 @@ import {connect} from "react-redux";
 import {updatePhoto} from "../../actions/user.actions";
 
 class Settings extends Component{
-    constructor(props) {
-        super(props);
-    }
-
     handleSubmit=(e)=>{
         e.preventDefault();
         const formData=new FormData();
@@ -21,7 +17,7 @@ render() {
         const {displayName,photoURL,department}=this.props.user;
         return(
             <div className={"settings container"}>
-                <img src={photoURL} alt="profile photo"/>
+                <img src={photoURL} alt={""}/>
                 <span className={"image-upload"}>
                     <form onSubmit={this.handleSubmit} >
                         <label htmlFor="file-upload">

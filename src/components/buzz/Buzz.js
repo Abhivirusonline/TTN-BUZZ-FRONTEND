@@ -4,10 +4,6 @@ import BuzzForm from "./BuzzForm/BuzzForm";
 import "./Buzz.css";
 
 class Buzz extends Component{
-    constructor(props) {
-        super(props);
-
-    }
     render() {
         return(
             <div className={"Buzz"}>

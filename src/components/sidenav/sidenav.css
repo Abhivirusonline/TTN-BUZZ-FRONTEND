@@ -8,6 +8,7 @@
     border-radius: 50%;
 }
 .side-nav{
+    padding-top: 10px;
     background-color: #cccccc;
     margin: 100px auto;
     width: 250px;

@@ -5,7 +5,7 @@ import {connect} from "react-redux";
 
 class SideNav extends Component{
     render() {
-        const {displayName,photoURL,email,isAdmin}=this.props.user;
+        const {photoURL,isAdmin}=this.props.user;
         return(
             <section className={"side-nav col-xs-12 col-lg-4 col-sm-4 col-md-4 row"}>
                 <div className={"profile"}>
@@ -25,7 +25,7 @@ class SideNav extends Component{
                         </NavLink>
                     </li>
                     {
-                        this.props.user.isAdmin?
+                        isAdmin?
                             <li>
                                 <NavLink to={"/dashboard/resolve"} activeClassName={"selected-item"}>
                                     <i className="fab fa-resolving"></i>

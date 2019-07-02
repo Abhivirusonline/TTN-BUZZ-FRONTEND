@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import "./dashboard.css"
-import {BrowserRouter as Router,Link,Route,Switch,Redirect} from "react-router-dom";
+import {Route,Switch} from "react-router-dom";
 import Buzz from "../buzz/Buzz";
 import Header from "../Header/Header";
 import {connect} from "react-redux";
@@ -12,10 +12,6 @@ import {fetchUser} from "../../actions/user.actions";
 
 
 class Dashboard extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         this.props.fetchUser();
     }
@@ -29,11 +25,14 @@ class Dashboard extends Component {
             <div className={"dashboard"}>
                 <Header history={this.props.history} isAdmin={this.props.user.isAdmin}/>
                 <SideNav/>
+                <Switch>
                 <Route exact path ={`${match.path}/`} component={Buzz} />
                 <Route exact path ={`${match.path}/buzz`} component ={Buzz}/>
                 <Route exact path ={`${match.path}/complaints`} component ={Complaints}/>
                 <Route exact path ={`${match.path}/resolve`} component ={Resolve}/>
                 <Route exact path={`${match.path}/settings`} component={Settings}/>
+                <Route path={`${match.path}`} render={()=><div>You are lost...........</div>}/>
+                </Switch>
             </div>
         );
     }

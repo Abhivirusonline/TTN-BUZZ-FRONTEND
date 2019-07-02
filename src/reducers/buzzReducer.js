@@ -17,7 +17,7 @@ const buzzReducer=(state=initialState,action)=>{
 
         case DELETE_BUZZ:{
             state.buzzList=state.buzzList.filter((buzz)=>{
-                if(buzz._id!=action.payload){
+                if(buzz._id!==action.payload){
                     return buzz;
                 }
             });

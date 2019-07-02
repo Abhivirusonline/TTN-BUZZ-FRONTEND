@@ -1,10 +1,7 @@
 import React,{Component} from "react";
-import {NavLink,Router} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import "./Header.css";
 class Header extends Component{
-    constructor(props) {
-        super(props);
-    }
     logout=()=>{
     localStorage.removeItem('token');
     this.props.history.push('/');
