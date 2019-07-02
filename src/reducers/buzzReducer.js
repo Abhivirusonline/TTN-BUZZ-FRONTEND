@@ -1,28 +1,20 @@
 import {CREATE_BUZZ, FETCH_BUZZ, DELETE_BUZZ, LIKE_BUZZ, DISLIKE_BUZZ} from "../actions/actionTypes";
 
 const initialState={
-    buzzList:[
-        {
-            _id:'',
-            buzz:'',
-            attachment:'',
-            createAt:'',
-            postedBy:{
-                photoURL:'',
-            },
-            like:[],
-            dislike:[],
-            comments:[]
-        }
-    ]
+    buzzList:[]
 };
 const buzzReducer=(state=initialState,action)=>{
     switch (action.type) {
         case CREATE_BUZZ:
-            const buzzList = [action.payload,...state.buzzList]
+            const buzzList = [action.payload,...state.buzzList];
             return{...state,buzzList}
+
         case FETCH_BUZZ:
-            return{...state,buzzList:action.payload};
+            const buzz = state.buzzList.concat(...action.payload);
+            return{ ...state,
+                buzzList: buzz
+            };
+
         case DELETE_BUZZ:{
             state.buzzList=state.buzzList.filter((buzz)=>{
                 if(buzz._id!=action.payload){

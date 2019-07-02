@@ -3,6 +3,7 @@ import "./complaints.css";
 import {fetchUser} from "../../actions/user.actions";
 import {fileComplaint,fetchDepartment,showComplaintList} from "../../actions/complaints.action";
 import {connect} from "react-redux";
+import DetailComp from "./detailComp";
 class Complaints extends Component{
     constructor(props) {
         super(props);
@@ -48,7 +49,7 @@ class Complaints extends Component{
                     </div>
                     <div className={"col-xs-12 col-sm-6 col-md-6 col-lg-6 form-group"}>
                         <label htmlFor="issueTitle" className={"control-label"}>Issue Title</label>
-                        <input type={"text"} name="issueTitle" id="issueTitle" className={"form-control"} required/>
+                        <input type={"text"} name="issueTitle" id="issueTitle" className={"form-control"} required maxLength={50}/>
                     </div>
                 </div>
                 <div className={"myrow"}>
@@ -65,7 +66,7 @@ class Complaints extends Component{
                     <div className={"col-xs-12 col-sm-12 col-md-12 col-lg-12 form-group"}>
                         <label htmlFor="concern" className={"control-label"}>Your Concern</label>
                         <textarea name="concern" id="concern" className={"form-control"} required cols={"30"} rows={"8"}
-                        placeholder={"write your concern to us."}
+                        placeholder={"write your concern to us."} maxLength={1000}
                         />
                     </div>
                 </div>
@@ -84,18 +85,14 @@ class Complaints extends Component{
             </form>
                 <div className={"resolve container"}>
                     <div className={"resolve-label"}>
-                        <label>All Complaints</label>
+                        <label>My Complaints</label>
                     </div>
                     <div className={"table-responsive"}>
                         <table className={"table table-bordered"}>
                             <thead>
                             <tr key={"first-row"}>
                                 <th>
-                                    <select name="department" id="department" className={"form-control"}>
-                                         {
-                                            departmentList.map(department=>(<option value={department._id}>{department.deptName}</option>))
-                                        }
-                                    </select>
+                                   Department
                                 </th>
                                 <th>Issue id</th>   <th>Locked By</th> <th>Assigned To</th> <th>Status</th>
                             </tr>
@@ -103,15 +100,11 @@ class Complaints extends Component{
                             <tbody>
                             {
                                 complaintList.map(complain=> {
+                                    //checking that only user complaint displayed here
                                     if(complain.RaisedBy._id===this.props.user._id)
-                                        return (<tr>
-                                            <td>{complain.department.deptName}</td>
-                                            <td style={{color:"blue"}}>{complain._id}</td>
-                                            <td>{complain.RaisedBy.displayName}</td>
-                                            <td>{complain.assignedTo.displayName}
-                                            </td>
-                                            <td className={complain.status}>{complain.status}</td>
-                                        </tr>)
+                                    {
+                                       return <DetailComp complaint={complain}/>
+                                    }
                                 })
                             }
                             </tbody>

@@ -2,14 +2,8 @@ import React,{Component} from "react";
 import "./sidenav.css";
 import {NavLink} from "react-router-dom";
 import {connect} from "react-redux";
-import {fetchUser} from "../../actions/user.actions";
 
 class SideNav extends Component{
-    constructor(props) {
-        super(props);
-
-    }
-
     render() {
         const {displayName,photoURL,email,isAdmin}=this.props.user;
         return(
@@ -41,6 +35,9 @@ class SideNav extends Component{
                             :
                             null
                     }
+                    <li>
+                        <NavLink to={"/dashboard/settings"} activeClassName={"selected-item"}><i className="fas fa-user-cog"></i>SETTINGS</NavLink>
+                    </li>
                 </ul>
             </section>
         );

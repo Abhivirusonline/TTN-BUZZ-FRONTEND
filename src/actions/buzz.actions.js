@@ -7,8 +7,9 @@ export const displayBuzz=(data)=>({
     payload:data
 });
 
-export const fetchbuzz=()=>dispatch=>{
-    axiosInstance.get(constant.buzzAPI)
+export const fetchbuzz=(skip)=>dispatch=>{
+    console.log("url is :"+constant.buzzAPI+"/"+skip)
+    axiosInstance.get(constant.buzzAPI+"/"+skip)
             .then(res=>{
                 dispatch(displayBuzz(res.data));
             }).catch(err=>{
@@ -54,12 +55,12 @@ export const saveBuzz = formData => dispatch => {
             data:formData,
             config:{ headers:{'Content-Type':'multipart/form-data'}}
         }).then(res=>{
-            console.log("data saved on server and now dispatch to save in store");
             dispatch({
                 type: CREATE_BUZZ,
                 payload:res.data
             });
         }).catch(err=>{
+            alert("something went wrong.")
             console.log("action error to save buzz on server"+err);
         })
 };

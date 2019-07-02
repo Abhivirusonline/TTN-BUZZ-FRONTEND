@@ -1,0 +1,24 @@
+
+@media screen and (max-width: 800px) {
+    .buzz-feed,.buzz-create{
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .side-nav{
+        display: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    .buzz-feed,.buzz-create{
+        width: 95vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (max-width: 900px) {
+    .side-nav{
+        width: 2vw;
+    }
+}
+

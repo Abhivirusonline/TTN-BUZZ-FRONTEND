@@ -4,12 +4,16 @@
 }
 .login-background{
     width: 100%;
-    background: url('loginback.jpg') no-repeat local;
+    background: url('./background.jpg') no-repeat local;
     background-size: cover;
-    padding-bottom: 300px;
-    padding-top: 200px;
+    height: 100vh;
+    position: relative;
 }
 .login-card{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width:600px;
     margin-left: auto;
     margin-right: auto;
@@ -22,10 +26,10 @@
     width: 200px;
 }
 .login-card input[type="button"]{
-    background-color: #ff0000;
-    border:none;
+    background-color: #1d16f9;
+    border:1px solid #ccc;
     padding: 10px 5px;
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
 }

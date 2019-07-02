@@ -11,9 +11,8 @@ class Settings extends Component{
     handleSubmit=(e)=>{
         e.preventDefault();
         const formData=new FormData();
-        alert(e.target[0].value);
-        if(e.target[1].value) {
-            formData.append('attachment', e.target[1].files[0], 'attachment');
+        if(e.target.attachment.value) {
+            formData.append('attachment', e.target.attachment.files[0], 'attachment');
         }
         this.props.updatePhoto(formData);
         e.target.reset();
@@ -24,12 +23,12 @@ render() {
             <div className={"settings container"}>
                 <img src={photoURL} alt="profile photo"/>
                 <span className={"image-upload"}>
-                    <form onSubmit={this.handleSubmit} encType='multipart/form-data'>
+                    <form onSubmit={this.handleSubmit} >
                         <label htmlFor="file-upload">
                         <i className="far fa-image"></i>
                     </label>
                     <input type="file" name={"attachment"} id="file-upload" className={"attachment"} style={{display:"none"}}/>
-                        <button type="submit" className="btn btn-success">
+                        <button type="submit" className="btn btn-success" style={{width:"100px"}}>
                                 <i className="fas fa-paper-plane"></i> Update
                         </button>
                     </form>

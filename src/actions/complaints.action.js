@@ -10,6 +10,7 @@ export const fileComplaint=formData=>dispatch=>{
         data:formData,
         config:{headers:{'Content-Type':'multipart/form-data'}}
     }).then(res=>{
+        console.log('file complaint success');
         dispatch({
             type:FILE_COMPLAINT,
             payload:res.data

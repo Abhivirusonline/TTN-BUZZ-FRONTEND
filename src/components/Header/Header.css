@@ -21,7 +21,7 @@ nav  a,nav >div{
     cursor: pointer;
     text-align: center;
 }
-nav a:hover,nav >div:hover{
+nav a:active,nav >div:active{
     color: #ffffff;
     background-color: #030474;
     text-decoration: none;

@@ -23,8 +23,12 @@ export const fetchAllUser=()=>dispatch=>{
         })
         .catch(err=>console.log("error :",err))
 }
-export const updatePhoto=()=>dispatch=>{
-    axiosInstance.post(constant.profileAPI)
+export const updatePhoto=(formData)=>dispatch=>{
+    axiosInstance({
+        method:'post',
+        url:constant.profileAPI,
+        data:formData
+    })
         .then(res=>{
             dispatch({
                 type:FETCH_USER,
