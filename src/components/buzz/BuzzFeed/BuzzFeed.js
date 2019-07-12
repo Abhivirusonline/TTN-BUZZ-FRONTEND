@@ -58,7 +58,8 @@ class BuzzFeed extends Component{
     render() {
         let buzzes=this.props.buzzes;
         const {user}=this.props;
-        return(<InfiniteScroll
+        return(<div className={"buzz-feed-container"}>
+            <InfiniteScroll
                 pageStart={0}
                 loadMore={this.loadFunc}
                 hasMore={this.state.skip < this.props.buzzes.length}
@@ -76,17 +77,17 @@ class BuzzFeed extends Component{
                                 <img src={postedBy.photoURL} alt="" width={"100%"} height="100px"/>
                             </div>
                             <div className={"col-lg-8 col-xs-8 col-md-8 col-sm-8"}>
-                                    <div className={"col-lg-5 col-xs-7 col-sm-6 col-md-6"}>
+                                    <div className={"col-lg-7 col-xs-7 col-sm-6 col-md-6"}>
                                         {
                                             <label style={{display:"block"}}>{postedBy.displayName}</label>
                                         }
                                         <span>
                                             {
-                                                moment(createdAt).fromNow()
+                                                moment(createdAt).calendar()
                                             }
                                         </span>
                                     </div>
-                                    <div className={"col-lg-2 col-lg-offset-4 col-md-2 col-md-offset-4 col-xs-3 col-xs-offset-2 col-sm-2 col-sm-offset-4 activity"}>
+                                    <div className={"col-lg-2 col-lg-offset-3 col-md-2 col-md-offset-4 col-xs-3 col-xs-offset-2 col-sm-2 col-sm-offset-4 activity"}>
                                         {category}
                                     </div>
 
@@ -101,17 +102,17 @@ class BuzzFeed extends Component{
                             }
                         </div>
                         <section className={"row buzz-content"}>
-                            <div>
+                            <article>
                                 <ReadMoreReact text={buzz}
                                                    min={100}
                                                    ideal={150}
                                                    max={200}
                                                    readMoreText={<div className={"read-more"}>Read More...</div>}/>
-                            </div>
+                            </article>
                             {
-                                attachment === undefined ? null :
-                                    <div className={"buzz-attachment"}>
-                                        <img src={attachment} alt=""/>
+
+                                attachment === "" ? null :
+                                    <div className={"buzz-attachment"} style={Object.assign({background:`url("${attachment}") center no-repeat`},{backgroundSize:'contain'})}>
                                     </div>
                             }
                         </section>
@@ -128,14 +129,13 @@ class BuzzFeed extends Component{
                             </div>
                             <div className={"col-lg-4 col-md-4 col-sm-4 col-xs-4"} id={buzzId}
                                  onClick={this.handleComment}>
-                                <i className="far fa-comment-dots" id={buzzId}></i> <span className="badge">{comments.length}</span>
+                                <i className="far fa-comment-dots" id={buzzId}></i> <span className="badge" id={buzzId}>{comments.length}</span>
                             </div>
                         </div>
                     </div>
-
                 )
             })}
-        </InfiniteScroll>);
+            </InfiniteScroll> </div>);
     }
 }
 
