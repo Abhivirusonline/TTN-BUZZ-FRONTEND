@@ -1,11 +1,12 @@
 .buzz-feed{
-    width:55vw;
+    padding: 2px 16px;
+    width:30vw;
     border-radius: 5px;
     margin-top: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     transition: 0.3s;
-    margin-left: 35vw;
+    margin-left: 30vw;
 }
 .buzz-feed:first-child .buzz-header{
     height: 78px;
@@ -18,8 +19,6 @@
     padding: 16px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    border-bottom: 1px solid #ccc;
-
 }
 .buzz-header div img{
     -webkit-border-radius: 50%;
@@ -27,6 +26,7 @@
     border-radius: 50%;
     height: 40.7px;
     max-width: 40px;
+    width: 100%;
 }
 .buzz-header div span:first-child:hover{
     color: blue;
@@ -54,17 +54,16 @@
     word-wrap: break-word;
 }
 .buzz-attachment{
+    vertical-align: top;
     padding-right: 5px;
     padding-left: 5px;
-    text-align: center;
-}
-.buzz-content img{
-    width:80%;
-    max-height: fit-content;
+    min-height: 0;
+    max-width: 100%;
+    height: 427px;
+    max-height: 427px;
 
 }
 .buzz-footer{
-    padding: 2px 16px;
     border-top: 1px solid #ccc;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
