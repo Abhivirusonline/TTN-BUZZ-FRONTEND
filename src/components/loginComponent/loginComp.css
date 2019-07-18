@@ -8,18 +8,19 @@
     background-size: cover;
     height: 100vh;
     position: relative;
+    opacity: 0.9;
 }
 .login-card{
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width:600px;
+    width:300px;
     margin-left: auto;
     margin-right: auto;
     background-color: #fff;
-    height: 350px;
     text-align: center;
+    padding-bottom: 10px;
 
 }
 .login-card img{
@@ -32,4 +33,16 @@
     color: #fff;
     font-size: 20px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .login-card{
+        height: fit-content;
+        width: fit-content;
+        padding-bottom: 10px;
+        height: auto;
+    }
+    .login-card h2{
+        font-size: 16px;
+    }
 }

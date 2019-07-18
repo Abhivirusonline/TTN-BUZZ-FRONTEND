@@ -5,7 +5,7 @@ import constant from "../../config/constants";
 class Login extends Component{
     componentDidMount() {
         if(localStorage.getItem('token'))
-            this.props.history.push('/dashboard')
+             this.props.history.push('/dashboard')
     }
     render() {
         return(

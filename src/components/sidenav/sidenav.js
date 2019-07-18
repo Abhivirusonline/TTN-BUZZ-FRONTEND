@@ -8,18 +8,18 @@ class SideNav extends Component{
         const {photoURL,isAdmin}=this.props.user;
         return(
             <section className={"side-nav col-xs-12 col-lg-4 col-sm-4 col-md-4 row"}>
-                <div className={"profile"}>
+                <div className={"profile"} title={"User profile"}>
                     <img src={photoURL} alt="Avatar" style={{width:"100%"}}/>
                 </div>
                 <ul>
                     <li>
-                        <NavLink to={"/dashboard"} activeClassName={"selected-item"}>
+                        <NavLink to={"/dashboard"} activeClassName={"selected-item"} title={"Buzz feed"}>
                             <i className="far fa-newspaper"></i>
                             BUZZ
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/dashboard/complaints"} activeClassName={"selected-item"}>
+                        <NavLink to={"/dashboard/complaints"} activeClassName={"selected-item"} title={"Complaints"}>
                             <i className="fas fa-file-alt"></i>
                             COMPLAINTS
                         </NavLink>
@@ -27,7 +27,7 @@ class SideNav extends Component{
                     {
                         isAdmin?
                             <li>
-                                <NavLink to={"/dashboard/resolve"} activeClassName={"selected-item"}>
+                                <NavLink to={"/dashboard/resolve"} activeClassName={"selected-item"} title={"Resolve"}>
                                     <i className="fab fa-resolving"></i>
                                     RESOLVE
                                 </NavLink>
@@ -36,7 +36,7 @@ class SideNav extends Component{
                             null
                     }
                     <li>
-                        <NavLink to={"/dashboard/settings"} activeClassName={"selected-item"}><i className="fas fa-user-cog"></i>SETTINGS</NavLink>
+                        <NavLink to={"/dashboard/settings"} activeClassName={"selected-item"} title={"Settings"}><i className="fas fa-user-cog"></i>SETTINGS</NavLink>
                     </li>
                 </ul>
             </section>

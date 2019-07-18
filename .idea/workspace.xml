@@ -2,23 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0bc9462-556b-4193-a810-4f3a70272f6c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzThread/BuzzThread.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzThread/BuzzThread.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzThread/commentComp.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzThread/commentComp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/buzz.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/buzz.actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/complaints.action.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/complaints.action.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/user.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/user.actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/buzz/Buzz.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buzz/Buzz.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/buzz/Buzz.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buzz/Buzz.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzFeed.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzFeed.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzFeed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/buzz/BuzzForm/BuzzForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buzz/BuzzForm/BuzzForm.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/buzz/BuzzForm/BuzzForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buzz/BuzzForm/BuzzForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/complaints/complaints.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/complaints/complaints.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/complaints/complaints.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/complaints/complaints.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/complaints/detailComp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/complaints/detailComp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/dashboard/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loginComponent/loginComp.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loginComponent/loginComp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loginComponent/loginComp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loginComponent/loginComp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/resolve/resolve.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/resolve/resolve.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/resolve/resolve.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/resolve/resolve.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/settings/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/settings.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/settings/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/settings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sidenav/sidenav.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidenav/sidenav.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sidenav/sidenav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidenav/sidenav.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/buzzReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/buzzReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/complaint.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/complaint.reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,34 +49,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/complaints/complaints.js">
+        <entry file="file://$PROJECT_DIR$/src/components/settings/settings.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="104" column="76" selection-start-line="104" selection-start-column="76" selection-end-line="104" selection-end-column="76" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducers/buzzReducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="225">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -67,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/settings/settings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+            <state relative-caret-position="405">
+              <caret line="27" column="72" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -77,10 +70,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/index.js">
+        <entry file="file://$PROJECT_DIR$/src/components/complaints/complaints.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+            <state relative-caret-position="300">
+              <caret line="63" column="133" selection-start-line="63" selection-start-column="133" selection-end-line="63" selection-end-column="133" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -89,22 +82,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/dashboard/dashboard.js">
+        <entry file="file://$PROJECT_DIR$/src/actions/buzz.actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+            <state relative-caret-position="461">
+              <caret line="118" column="30" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
               <folding>
-                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#0#183#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/actionTypes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzThread/commentComp.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzFeed.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="105" column="51" selection-start-line="105" selection-start-column="51" selection-end-line="105" selection-end-column="51" />
+            <state relative-caret-position="251">
+              <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -113,10 +127,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/buzz/BuzzForm/BuzzForm.js">
+        <entry file="file://$PROJECT_DIR$/src/components/buzz/BuzzForm/BuzzForm.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="27" column="161" selection-start-line="27" selection-start-column="161" selection-end-line="27" selection-end-column="161" />
+            <state relative-caret-position="-371">
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -125,21 +148,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzFeed.css">
+        <entry file="file://$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzThread/BuzzThread.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="102" column="16" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/sidenav/sidenav.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+            <state relative-caret-position="210">
+              <caret line="109" column="67" selection-start-line="109" selection-start-column="67" selection-end-line="109" selection-end-column="67" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#200#275#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,8 +166,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -167,6 +182,15 @@
       <find>padding</find>
       <find>FILE_COMPLAINT</find>
       <find>he</find>
+      <find>alert</find>
+      <find>logout</find>
+      <find>logout()</find>
+      <find>console.log</find>
+      <find>CREATE_BUZ</find>
+      <find>CREATE_BUZZ</find>
+      <find>margin</find>
+      <find>border-bottom</find>
+      <find>title</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -175,63 +199,63 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/App.css" />
-        <option value="$PROJECT_DIR$/src/index.css" />
-        <option value="$PROJECT_DIR$/src/components/dashboard/dashboard.css" />
-        <option value="$PROJECT_DIR$/src/components/profile/profile.js" />
-        <option value="$PROJECT_DIR$/src/components/userBlock/userBlock.css" />
-        <option value="$PROJECT_DIR$/src/components/userBlock/cards.js" />
-        <option value="$PROJECT_DIR$/src/components/userBlock/userBlock.js" />
-        <option value="$PROJECT_DIR$/src/components/profile/profile.css" />
-        <option value="$PROJECT_DIR$/src/store/store.js" />
-        <option value="$PROJECT_DIR$/src/reducers/department.reducer.js" />
-        <option value="$PROJECT_DIR$/src/reducers/issuetype.reducer.js" />
         <option value="$PROJECT_DIR$/src/reducers/rootReducer.js" />
-        <option value="$PROJECT_DIR$/src/components/settings/settings.css" />
         <option value="$PROJECT_DIR$/src/reducers/user.reducer.js" />
         <option value="$PROJECT_DIR$/src/actions/settings.actions.js" />
-        <option value="$PROJECT_DIR$/src/actions/actionTypes.js" />
-        <option value="$PROJECT_DIR$/src/components/resolve/resolve.js" />
-        <option value="$PROJECT_DIR$/src/actions/user.actions.js" />
         <option value="$PROJECT_DIR$/src/components/utilities/buzzTiming.js" />
-        <option value="$PROJECT_DIR$/src/components/loginComponent/loginComp.js" />
-        <option value="$PROJECT_DIR$/src/components/loginComponent/loginComp.css" />
-        <option value="$PROJECT_DIR$/src/components/Header/Header.css" />
-        <option value="$PROJECT_DIR$/src/components/buzz/BuzzForm/BuzzForm.css" />
         <option value="$PROJECT_DIR$/src/components/complaints/details.js" />
-        <option value="$PROJECT_DIR$/src/components/complaints/complaints.css" />
-        <option value="$PROJECT_DIR$/src/components/resolve/resolve.css" />
         <option value="$PROJECT_DIR$/src/components/complaints/detailComp.css" />
-        <option value="$PROJECT_DIR$/src/actions/complaints.action.js" />
-        <option value="$PROJECT_DIR$/src/components/complaints/detailComp.js" />
         <option value="$PROJECT_DIR$/src/config/constants.js" />
         <option value="$PROJECT_DIR$/src/components/buzz/BuzzForm/BuzzThread/BuzzThread.css" />
         <option value="$PROJECT_DIR$/src/components/buzz/BuzzForm/BuzzThread/BuzzThread.js" />
-        <option value="$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzThread/BuzzThread.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/reducers/complaint.reducer.js" />
-        <option value="$PROJECT_DIR$/src/actions/buzz.actions.js" />
-        <option value="$PROJECT_DIR$/src/components/sidenav/sidenav.css" />
-        <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/Header/Header.js" />
         <option value="$PROJECT_DIR$/src/components/buzz/Buzz.js" />
-        <option value="$PROJECT_DIR$/src/components/settings/settings.js" />
-        <option value="$PROJECT_DIR$/src/components/sidenav/sidenav.js" />
-        <option value="$PROJECT_DIR$/src/components/complaints/complaints.js" />
-        <option value="$PROJECT_DIR$/src/reducers/buzzReducer.js" />
-        <option value="$PROJECT_DIR$/src/components/buzz/Buzz.css" />
-        <option value="$PROJECT_DIR$/src/components/dashboard/dashboard.js" />
         <option value="$PROJECT_DIR$/src/routes/index.js" />
-        <option value="$PROJECT_DIR$/src/components/buzz/BuzzForm/BuzzForm.js" />
+        <option value="$PROJECT_DIR$/src/fetchlogin.js" />
+        <option value="$PROJECT_DIR$/src/serviceWorker.js" />
+        <option value="$PROJECT_DIR$/src/App.css" />
+        <option value="$PROJECT_DIR$/src/store/store.js" />
+        <option value="$PROJECT_DIR$/src/reducers/complaint.reducer.js" />
+        <option value="$PROJECT_DIR$/src/components/loginComponent/loginComp.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/components/utilities/saveToken.js" />
+        <option value="$PROJECT_DIR$/src/components/utilities/removeToken.js" />
+        <option value="$PROJECT_DIR$/src/middlewares/index.js" />
+        <option value="$PROJECT_DIR$/src/components/dashboard/dashboard.js" />
+        <option value="$PROJECT_DIR$/src/actions/actionTypes.js" />
+        <option value="$PROJECT_DIR$/src/reducers/buzzReducer.js" />
+        <option value="$PROJECT_DIR$/src/components/Header/Header.css" />
+        <option value="$PROJECT_DIR$/src/components/buzz/Buzz.css" />
+        <option value="$PROJECT_DIR$/src/components/sidenav/sidenav.css" />
+        <option value="$PROJECT_DIR$/src/components/complaints/complaints.css" />
+        <option value="$PROJECT_DIR$/src/components/resolve/resolve.css" />
+        <option value="$PROJECT_DIR$/src/components/loginComponent/loginComp.css" />
+        <option value="$PROJECT_DIR$/src/components/settings/settings.css" />
+        <option value="$PROJECT_DIR$/src/components/buzz/BuzzForm/BuzzForm.css" />
+        <option value="$PROJECT_DIR$/src/components/sidenav/sidenav.js" />
+        <option value="$PROJECT_DIR$/src/components/Header/Header.js" />
+        <option value="$PROJECT_DIR$/src/components/complaints/detailComp.js" />
         <option value="$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzFeed.css" />
+        <option value="$PROJECT_DIR$/src/actions/user.actions.js" />
+        <option value="$PROJECT_DIR$/src/components/resolve/resolve.js" />
+        <option value="$PROJECT_DIR$/src/actions/complaints.action.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/buzz/BuzzFeed/commentComp.css" />
+        <option value="$PROJECT_DIR$/src/components/buzz/BuzzFeed/commentComp.js" />
         <option value="$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzFeed.js" />
+        <option value="$PROJECT_DIR$/src/components/buzz/BuzzForm/BuzzForm.js" />
+        <option value="$PROJECT_DIR$/src/components/settings/settings.js" />
+        <option value="$PROJECT_DIR$/src/components/complaints/complaints.js" />
+        <option value="$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzThread/commentComp.css" />
+        <option value="$PROJECT_DIR$/src/actions/buzz.actions.js" />
+        <option value="$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzThread/BuzzThread.js" />
+        <option value="$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzThread/commentComp.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="25" />
-    <option name="width" value="807" />
+    <option name="width" value="683" />
     <option name="height" value="710" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -242,6 +266,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TTN-BUZZ-FRONTEND" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TTN-BUZZ-FRONTEND" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Tests'; set:Tests; class com.intellij.psi.search.scope.TestsScope">
           <expand>
@@ -335,12 +370,6 @@
               <item name="TTN-BUZZ-FRONTEND" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/Documents/TTN-BUZZ-FRONTEND" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Assests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="TTN-BUZZ-FRONTEND" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Documents/TTN-BUZZ-FRONTEND" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
@@ -364,6 +393,15 @@
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="buzz" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="BuzzFeed" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="BuzzThread" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="TTN-BUZZ-FRONTEND" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/TTN-BUZZ-FRONTEND" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="buzz" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="BuzzForm" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
@@ -372,13 +410,6 @@
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="complaints" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="TTN-BUZZ-FRONTEND" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Documents/TTN-BUZZ-FRONTEND" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="dashboard" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="TTN-BUZZ-FRONTEND" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -412,6 +443,25 @@
               <item name="TTN-BUZZ-FRONTEND" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/Documents/TTN-BUZZ-FRONTEND" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="utilities" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="TTN-BUZZ-FRONTEND" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/TTN-BUZZ-FRONTEND" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="TTN-BUZZ-FRONTEND" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/TTN-BUZZ-FRONTEND" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="middlewares" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="TTN-BUZZ-FRONTEND" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/TTN-BUZZ-FRONTEND" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="reducers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
@@ -426,16 +476,11 @@
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="store" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
             <path>
-              <item name="TTN-BUZZ-FRONTEND" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TTN-BUZZ-FRONTEND" type="462c0819:PsiDirectoryNode" />
+              <item name="TTN-BUZZ-FRONTEND" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/TTN-BUZZ-FRONTEND" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="utilities" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -446,7 +491,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/loginComponent" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/buzz/BuzzFeed" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -466,19 +511,19 @@
     <option name="SHOW_DIALOG" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/loginComponent" />
-      <recent name="$PROJECT_DIR$/src/Assests" />
-      <recent name="$PROJECT_DIR$/src/components/dashboard" />
-      <recent name="$PROJECT_DIR$/src/components/buzz" />
-      <recent name="$PROJECT_DIR$/src/components" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzThread" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/Assests" />
       <recent name="$PROJECT_DIR$/src/components/buzz/BuzzFeed" />
       <recent name="$PROJECT_DIR$/src/components/profile" />
-      <recent name="$PROJECT_DIR$/src/components/buzz/BuzzForm" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/buzz/BuzzFeed" />
+      <recent name="$PROJECT_DIR$/src/components/loginComponent" />
+      <recent name="$PROJECT_DIR$/src/Assests" />
+      <recent name="$PROJECT_DIR$/src/components/dashboard" />
+      <recent name="$PROJECT_DIR$/src/components/buzz" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -540,280 +585,52 @@
       <workItem from="1561351742899" duration="21723000" />
       <workItem from="1561393136173" duration="54584000" />
       <workItem from="1561546987705" duration="74115000" />
-      <workItem from="1561988539646" duration="30825000" />
+      <workItem from="1561988539646" duration="45367000" />
+      <workItem from="1562219282281" duration="21898000" />
+      <workItem from="1562826550048" duration="4974000" />
+      <workItem from="1562836652986" duration="22054000" />
+      <workItem from="1562922541983" duration="4720000" />
+      <workItem from="1563167815936" duration="621000" />
+      <workItem from="1563294468692" duration="40172000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="385489000" />
+    <option name="totallyTimeSpent" value="494470000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="710" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25688756" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.183172" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.15490533" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.67469877" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.051635113" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4996277" weight="0.39759037" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32874355" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4996277" weight="0.32185885" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003723" side_tool="true" weight="0.28743544" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32874355" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19880864" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info id="npm" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.15490533" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.67469877" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4996277" weight="0.051635113" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003723" side_tool="true" weight="0.28743544" />
-      <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32874355" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/utilities/saveToken.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/rootReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="537" column="16" selection-start-line="537" selection-start-column="16" selection-end-line="537" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="5872" column="1" selection-start-line="5872" selection-start-column="1" selection-end-line="5872" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/settings/settings.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/settings.actions.js" />
-    <entry file="file://$PROJECT_DIR$/src/reducers/user.reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="57" lean-forward="true" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/department.reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/actionTypes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/user.actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Assests/IMG_20181121_132247.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/userBlock/cards.js" />
-    <entry file="file://$PROJECT_DIR$/src/Assests/header background.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/utilities/buzzTiming.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/loginComponent/loginComp.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="15" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/dashboard/dashboard.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/Header.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/buzz/BuzzForm/BuzzForm.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/complaints/complaints.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/complaints/detailComp.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/complaints.action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/loginComponent/loginComp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="77" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/resolve/resolve.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="51" column="155" selection-start-line="51" selection-start-column="155" selection-end-line="51" selection-end-column="155" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/resolve/resolve.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzThread/BuzzThread.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzThread/BuzzThread.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/logo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/favicon.ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/config/constants.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/buzz.actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="63" column="62" lean-forward="true" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#92#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/sidenav/sidenav.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -829,27 +646,208 @@
     <entry file="file://$PROJECT_DIR$/src/components/userBlock/userBlock.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/complaints/detailComp.js">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+        <state>
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/serviceWorker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="110" column="78" lean-forward="true" selection-start-line="110" selection-start-column="78" selection-end-line="110" selection-end-column="78" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fetchlogin.js" />
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/department.reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/rootReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/complaint.reducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state relative-caret-position="300">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/axios/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="149" column="14" selection-start-line="149" selection-start-column="14" selection-end-line="149" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utilities/axiosInterceptor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/middlewares/logger.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="37" column="17" lean-forward="true" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/user.reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/utilities/removeToken.js" />
+    <entry file="file://$PROJECT_DIR$/src/middlewares/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/dashboard/dashboard.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-toastify/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="325" column="2" selection-start-line="325" selection-start-column="2" selection-end-line="325" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/utilities/saveToken.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/buzzReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="61" column="27" selection-start-line="61" selection-end-line="62" />
+          <folding>
+            <element signature="e#0#214#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/buzz/Buzz.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        <state relative-caret-position="120">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/buzz/Buzz.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/sidenav/sidenav.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/dashboard/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56">
+          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/loginComponent/loginComp.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/resolve/resolve.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="34" selection-start-line="34" selection-end-line="42" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/loginComponent/loginComp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/complaints/complaints.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/Header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="63" column="1" lean-forward="true" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/sidenav/sidenav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="38" column="110" selection-start-line="38" selection-start-column="110" selection-end-line="38" selection-end-column="110" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -858,35 +856,89 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Header/Header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+        <state relative-caret-position="274">
+          <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/settings/settings.js">
+    <entry file="file://$PROJECT_DIR$/src/components/complaints/detailComp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+        <state relative-caret-position="-371">
+          <caret line="18" column="102" selection-start-line="18" selection-start-column="102" selection-end-line="18" selection-end-column="102" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzFeed.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/resolve/resolve.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="75" column="26" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/complaints.action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/user.actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="36" column="67" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        <state relative-caret-position="195">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/sidenav/sidenav.js">
+    <entry file="file://$PROJECT_DIR$/src/components/buzz/BuzzForm/BuzzForm.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-371">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/settings/settings.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/settings/settings.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <caret line="27" column="72" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -895,71 +947,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/complaints/complaints.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="104" column="76" selection-start-line="104" selection-start-column="76" selection-end-line="104" selection-end-column="76" />
+        <state relative-caret-position="300">
+          <caret line="63" column="133" selection-start-line="63" selection-start-column="133" selection-end-line="63" selection-end-column="133" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/buzzReducer.js">
+    <entry file="file://$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzThread/commentComp.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/buzz/Buzz.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/dashboard/dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzFeed.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="102" column="16" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
+        <state relative-caret-position="345">
+          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/buzz/BuzzForm/BuzzForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="27" column="161" selection-start-line="27" selection-start-column="161" selection-end-line="27" selection-end-column="161" />
+        <state relative-caret-position="244">
+          <caret line="53" column="76" selection-start-line="53" selection-start-column="76" selection-end-line="53" selection-end-column="76" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/actionTypes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/buzz.actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="118" column="30" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#183#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzFeed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="105" column="51" selection-start-line="105" selection-start-column="51" selection-end-line="105" selection-end-column="51" />
+        <state relative-caret-position="251">
+          <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzThread/BuzzThread.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="109" column="67" selection-start-line="109" selection-start-column="67" selection-end-line="109" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#200#275#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/buzz/BuzzFeed/BuzzThread/commentComp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

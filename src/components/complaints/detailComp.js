@@ -5,17 +5,18 @@ const DetailComp=(props)=>{
     const {complaint}=props;
     return(<tr>
             <td>{complaint.department.deptName}</td>
-            <td style={{color:"blue"}} data-toggle="modal" data-target={"#myModal"+complaint._id} className={"complaintId"}>{complaint._id}</td>
-            <td>{complaint.RaisedBy.displayName}</td>
-            <td>{complaint.assignedTo.displayName}
+            <td style={{color:"blue"}} data-toggle="modal" data-target={"#myModal"+complaint._id} className={"complaintId"} title={"Complaint ID"}>
+                {complaint._id}</td>
+            <td title={"Assigned To"}>{complaint.assignedTo.displayName}
             </td>
-            <td className={complaint.status}>{complaint.status}</td>
+            <td className={complaint.status} title={"status"}>
+                {complaint.status}</td>
 
             <div className="modal fade" id={"myModal"+complaint._id} role="dialog">
                 <div className="modal-dialog modal-lg">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <button type="button" className="close" data-dismiss="modal">&times;</button>
+                            <button type="button" className="close" data-dismiss="modal" title={"close"}>&times;</button>
                             <h4 className="modal-title">Complaint Details</h4>
                         </div>
                         <div className="modal-body">

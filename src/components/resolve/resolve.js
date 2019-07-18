@@ -31,8 +31,8 @@ class Resolve extends Component{
                                 <select name="department" id="department" className={"form-control"}>
                                     <option value="All" disabled selected >Department</option>
                                     {
-                                        departmentList.map(department=>{
-                                            return(<option value={department._id}>{department.deptName}</option>)
+                                        departmentList.map((department,index)=>{
+                                            return(<option value={department._id} key={index}>{department.deptName}</option>)
                                         })
                                     }
                                 </select>
@@ -42,13 +42,13 @@ class Resolve extends Component{
                         </thead>
                         <tbody>
                         {
-                            complaintList.map(complain=> {
-                                return (<tr>
-                                        <td>{complain.department.deptName}</td>
-                                        <td style={{color:"blue"}}>{complain._id}</td>
-                                        <td>{complain.RaisedBy.displayName}</td>
-                                        <td >{complain.assignedTo.displayName}</td>
-                                        <td>
+                            complaintList.map((complain,index)=> {
+                                return (<tr key={index}>
+                                        <td title={"department"}>{complain.department.deptName}</td>
+                                        <td style={{color:"blue"}} title={"Complaint ID"}>{complain._id}</td>
+                                        <td title={"locked by"}>{complain.RaisedBy.displayName}</td>
+                                        <td title={"Assigned to"}>{complain.assignedTo.displayName}</td>
+                                        <td title={"Update Complaint Status"}>
                                             <select name="status" id={complain._id} onChange={this.props.updateComplaintStatus} className={complain.status}>
                                                 <option value={complain.status} disabled selected >{complain.status}</option>
                                                 <option value={"In-Progress"}>In-Progress</option>

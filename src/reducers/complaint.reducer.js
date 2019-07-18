@@ -14,12 +14,12 @@ const complaintReducer = (state = initialState, action) => {
         }
         case UPDATE_COMPLAINT_STATUS: {
             const updatedComplaintList = state.complaintList.map(complaint => {
-                if (complaint._id === action.payload._id) {
-                    return action.payload;
+                if (complaint._id === action.payload[0]._id) {
+                    return action.payload[0];
                 }
                 return complaint;
             })
-            return {...state, buzzList: updatedComplaintList}
+            return {...state, complaintList: updatedComplaintList}
         }
         default: {
             return state;

@@ -1,14 +1,20 @@
-import {CREATE_BUZZ, FETCH_BUZZ, DELETE_BUZZ, LIKE_BUZZ, DISLIKE_BUZZ} from "./actionTypes";
+import {
+    CREATE_BUZZ_SUCCESS, CREATE_BUZZ_STARTED, CREATE_BUZZ_FAILED,
+    FETCH_BUZZ, DELETE_BUZZ_SUCCESS,
+    LIKE_BUZZ, DISLIKE_BUZZ, FETCH_BUZZ_SUCCESS
+} from "./actionTypes";
+
+import {toast} from "react-toastify";
+
 import axiosInstance from "../utilities/axiosInterceptor";
 import constant from '../config/constants';
 
 export const displayBuzz=(data)=>({
-    type:FETCH_BUZZ,
+    type:FETCH_BUZZ_SUCCESS,
     payload:data
 });
 
 export const fetchbuzz=(skip)=>dispatch=>{
-    console.log("url is :"+constant.buzzAPI+"/"+skip)
     axiosInstance.get(constant.buzzAPI+"/"+skip)
             .then(res=>{
                 dispatch(displayBuzz(res.data));
@@ -28,7 +34,7 @@ export const like=(e)=>dispatch=>{
             });
         })
         .catch(err=>{
-            console.log(" error in liked actions.");
+            toast.error("some error occurred");
         })
 }
 
@@ -48,20 +54,31 @@ export const dislike=(e)=>dispatch=>{
 }
 
 export const saveBuzz = formData => dispatch => {
-    console.log("form data inside save buzz :"+formData);
-        axiosInstance({
+    let toastId=null;
+    axiosInstance({
             method:'post',
             url:constant.buzzAPI,
             data:formData,
-            config:{ headers:{'Content-Type':'multipart/form-data'}}
+            config:{ headers:{'Content-Type':'multipart/form-data'}},
+            onUploadProgress:p=> {
+                const progress = Math.round((p.loaded * 100) / p.total);
+                if (toastId === null) {
+                    toastId = toast(`Please Wait while we post your buzz `, {progress});
+                } else {
+                    toast.update(toastId,{
+                        render:`Uploaded Successfully ${progress}, Processing`,
+                        type:toast.TYPE.SUCCESS,
+                    });
+                }
+            }
         }).then(res=>{
             dispatch({
-                type: CREATE_BUZZ,
+                type: CREATE_BUZZ_SUCCESS,
                 payload:res.data
             });
+            toast.done(toastId);
         }).catch(err=>{
-            alert("something went wrong.")
-            console.log("action error to save buzz on server"+err);
+            toast.error("Buzz Not Created");
         })
 };
 
@@ -74,8 +91,34 @@ export const deleteBuzz=(e)=>dispatch=>{
             }
         }).then(res=>{
             dispatch({
-                type:DELETE_BUZZ,
+                type:DELETE_BUZZ_SUCCESS,
                 payload:res.data
             });
         }).catch(err=>console.log(err))
+}
+
+export const saveComment=(formData)=>dispatch=>{
+    let toastId=null;
+    axiosInstance({
+        method:'put',
+        url:constant.buzzAPI,
+        data:formData,
+        onUploadProgress:p=> {
+            const progress = Math.round((p.loaded * 100) / p.total);
+            if (toastId === null) {
+                toastId = toast(`Please Wait while we post your comment `, {progress});
+            } else {
+                toast.update(toastId,{
+                    render:`Uploaded Successfully ${progress}, Processing`,
+                    type:toast.TYPE.SUCCESS,
+                });
+            }
+        }
+    }).then(res=>{
+        toast.done(toastId);
+        toast.success('done');
+    }).catch(err=>{
+        toast.dismiss(toastId);
+        toast.error("comment Not posted"+err);
+    })
 }

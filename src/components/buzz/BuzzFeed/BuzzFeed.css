@@ -43,9 +43,9 @@
     padding: 5px 16px;
 
 }
-.buzz-content div p{
+.buzz-content article{
     font-weight: normal;
-    font-family: Roboto;
+    font-family: Roboto !important;
     font-size: 14px;
     padding: 5px;
     text-align: left;
@@ -117,4 +117,7 @@
     border-radius: 5px;
     word-wrap: break-word;
     overflow-y: hidden;
+}
+.delete-btn{
+    margin-left: -2px;
 }

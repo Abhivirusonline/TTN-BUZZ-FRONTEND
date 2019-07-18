@@ -9,6 +9,7 @@ import Resolve from "../resolve/resolve";
 import SideNav from "../sidenav/sidenav";
 import Settings from "../settings/settings";
 import {fetchUser} from "../../actions/user.actions";
+import 'react-toastify/dist/ReactToastify.min.css';
 
 
 class Dashboard extends Component {
@@ -17,10 +18,7 @@ class Dashboard extends Component {
     }
 
     render() {
-
-        console.log("props in dashboard :"+this.props);
         const {match} = this.props;
-        console.log('match inside dashboard component',match.path);
         return (
             <div className={"dashboard"}>
                 <Header history={this.props.history} isAdmin={this.props.user.isAdmin}/>

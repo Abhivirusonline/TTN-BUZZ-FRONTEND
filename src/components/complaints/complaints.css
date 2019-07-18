@@ -1,12 +1,14 @@
 *{
     box-sizing: border-box;
 }
+.form-group {
+    margin-bottom: 0;
+}
 .complaints{
     border-radius: 5px;
     max-width: 600px;
     margin: 15px auto;
     border: 1px solid #ccc;
-
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
 }
@@ -62,4 +64,7 @@ textarea{
 }
 .PENDING{
     color: #f00;
+}
+table td{
+    word-wrap: break-word;
 }

@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://localhost:3001/dashboard -->
+<html lang="en" class="gr__localhost"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>TTN BUZZ</title>
+    
+    <link rel="shortcut icon" href="http://localhost:3001/logo.png">
+    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no">
+
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="./TTN BUZZ_files/bootstrap.min.css">
+    <link rel="manifest" href="http://localhost:3001/manifest.json">
+    <link href="./TTN BUZZ_files/css" rel="stylesheet">
+    <link rel="stylesheet" href="./TTN BUZZ_files/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <style type="text/css">body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.myrow{
+  margin: 0;
+  padding: 0;
+}</style><style type="text/css">*{
+    box-sizing: border-box;
+    margin: 0;
+}
+</style><style type="text/css">*{
+    box-sizing: border-box;
+    font-family: arial;
+}
+.login-background{
+    width: 100%;
+    background: url(/static/media/background.a65bc1d2.jpg) no-repeat local;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    opacity: 0.9;
+}
+.login-card{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width:300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 10px;
+
+}
+.login-card img{
+    width: 200px;
+}
+.login-card input[type="button"]{
+    background-color: #1d16f9;
+    border:1px solid #ccc;
+    padding: 10px 5px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .login-card{
+        height: fit-content;
+        width: fit-content;
+        padding-bottom: 10px;
+        height: auto;
+    }
+    .login-card h2{
+        font-size: 16px;
+    }
+}</style><style type="text/css"></style><style type="text/css">.buzz-feed{
+    padding: 2px 16px;
+    width:30vw;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: 0.3s;
+    margin-left: 30vw;
+}
+.buzz-feed:first-child .buzz-header{
+    height: 78px;
+}
+.buzz-feed:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.buzz-header{
+    background-color: #fff;
+    padding: 16px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.buzz-header div img{
+    border-radius: 50%;
+    height: 40.7px;
+    max-width: 40px;
+    width: 100%;
+}
+.buzz-header div span:first-child:hover{
+    color: blue;
+}
+.buzz-header div span:first-child{
+    color: rgba(0,0,0,0.87);
+    cursor: pointer;
+}
+.buzz-header div span:last-child{
+    color: rgba(0,0,0,0.54);
+}
+
+.buzz-content{
+    padding: 5px 16px;
+
+}
+.buzz-content article{
+    font-weight: normal;
+    font-family: Roboto !important;
+    font-size: 14px;
+    padding: 5px;
+    text-align: left;
+    direction: ltr;
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+.buzz-attachment{
+    vertical-align: top;
+    padding-right: 5px;
+    padding-left: 5px;
+    min-height: 0;
+    max-width: 100%;
+    height: 427px;
+    max-height: 427px;
+
+}
+.buzz-footer{
+    border-top: 1px solid #ccc;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.buzz-footer div{
+    text-align: center;
+}
+.buzz-footer div i{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-right: 5px;
+}
+.buzz-footer div:hover{
+    background-color: #cccccc;
+    cursor: pointer;
+}
+.delete-btn{
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .buzz-content img{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 300px) {
+    .buzz-feed:first-child .buzz-header{
+        height: 85px;
+    }
+}
+.read-more{
+    color: #030474;
+    font-size: larger;
+    cursor: pointer;
+    width: 150px;
+}
+.liked{
+    color: #2823ff;
+}
+.disliked{
+    background-color: #ff4f4a;
+}
+.activity{
+    text-align: center;
+    border:1px solid #ccc;
+    background-color: #a9aabb;
+    padding: 2px;
+    border-radius: 5px;
+    word-wrap: break-word;
+    overflow-y: hidden;
+}
+.delete-btn{
+    margin-left: -2px;
+}</style><style type="text/css">/* roboto-100normal - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100;
+  src:
+    local('Roboto Thin '),
+    local('Roboto-Thin'),
+    url(/static/media/roboto-latin-100.987b8457.woff2) format('woff2'), 
+    url(/static/media/roboto-latin-100.e9dbbe8a.woff) format('woff'); /* Modern Browsers */
+}
+
+/* roboto-100italic - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 100;
+  src:
+    local('Roboto Thin italic'),
+    local('Roboto-Thinitalic'),
+    url(/static/media/roboto-latin-100italic.6232f43d.woff2) format('woff2'), 
+    url(/static/media/roboto-latin-100italic.d704bb3d.woff) format('woff'); /* Modern Browsers */
+}
+
+/* roboto-300normal - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src:
+    local('Roboto Light '),
+    local('Roboto-Light'),
+    url(/static/media/roboto-latin-300.55536c8e.woff2) format('woff2'), 
+    url(/static/media/roboto-latin-300.a1471d1d.woff) format('woff'); /* Modern Browsers */
+}
+
+/* roboto-300italic - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 300;
+  src:
+    local('Roboto Light italic'),
+    local('Roboto-Lightitalic'),
+    url(/static/media/roboto-latin-300italic.d69924b9.woff2) format('woff2'), 
+    url(/static/media/roboto-latin-300italic.210a7c78.woff) format('woff'); /* Modern Browsers */
+}
+
+/* roboto-400normal - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('Roboto Regular '),
+    local('Roboto-Regular'),
+    url(/static/media/roboto-latin-400.5d4aeb4e.woff2) format('woff2'), 
+    url(/static/media/roboto-latin-400.bafb105b.woff) format('woff'); /* Modern Browsers */
+}
+
+/* roboto-400italic - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('Roboto Regular italic'),
+    local('Roboto-Regularitalic'),
+    url(/static/media/roboto-latin-400italic.d8bcbe72.woff2) format('woff2'), 
+    url(/static/media/roboto-latin-400italic.9680d5a0.woff) format('woff'); /* Modern Browsers */
+}
+
+/* roboto-500normal - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src:
+    local('Roboto Medium '),
+    local('Roboto-Medium'),
+    url(/static/media/roboto-latin-500.28546717.woff2) format('woff2'), 
+    url(/static/media/roboto-latin-500.de8b7431.woff) format('woff'); /* Modern Browsers */
+}
+
+/* roboto-500italic - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 500;
+  src:
+    local('Roboto Medium italic'),
+    local('Roboto-Mediumitalic'),
+    url(/static/media/roboto-latin-500italic.510dec37.woff2) format('woff2'), 
+    url(/static/media/roboto-latin-500italic.ffcc050b.woff) format('woff'); /* Modern Browsers */
+}
+
+/* roboto-700normal - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local('Roboto Bold '),
+    local('Roboto-Bold'),
+    url(/static/media/roboto-latin-700.037d8304.woff2) format('woff2'), 
+    url(/static/media/roboto-latin-700.cf6613d1.woff) format('woff'); /* Modern Browsers */
+}
+
+/* roboto-700italic - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local('Roboto Bold italic'),
+    local('Roboto-Bolditalic'),
+    url(/static/media/roboto-latin-700italic.010c1aee.woff2) format('woff2'), 
+    url(/static/media/roboto-latin-700italic.846d1890.woff) format('woff'); /* Modern Browsers */
+}
+
+/* roboto-900normal - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src:
+    local('Roboto Black '),
+    local('Roboto-Black'),
+    url(/static/media/roboto-latin-900.19b7a0ad.woff2) format('woff2'), 
+    url(/static/media/roboto-latin-900.8c2ade50.woff) format('woff'); /* Modern Browsers */
+}
+
+/* roboto-900italic - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 900;
+  src:
+    local('Roboto Black italic'),
+    local('Roboto-Blackitalic'),
+    url(/static/media/roboto-latin-900italic.7b770d6c.woff2) format('woff2'), 
+    url(/static/media/roboto-latin-900italic.bc833e72.woff) format('woff'); /* Modern Browsers */
+}
+
+</style><style type="text/css">.buzz-create{
+    width: 50vw;
+    margin-left: 30vw;
+    border-radius: 10px;
+    padding: 10px 10px 60px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.buzz-create:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+button{
+    margin-top: 10px;
+    margin-bottom: 10px !important;
+    padding: 5px;
+    width: 50px;
+}
+input {
+    padding: 5px;
+    border-radius: 5px;
+}
+.textarea{
+    user-focus:'/';
+    font-size: 17px;
+    color: #000010;
+    font-family: Roboto;
+}
+.row select{
+    width: 60%;
+    margin: 10px 0 0 0;
+
+}
+
+
+input[type='file']{
+    margin-top: 10px;
+    width: 100px;
+}
+.post-control{
+    margin-top: 10px;
+    display: flex;
+    justify-content:space-between;
+}
+
+@media screen and (max-width: 400px) {
+    post-control{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:700px){
+    .btn-success{
+        position: absolute;
+        top: 59px;
+        width: auto;
+    }
+}</style><style type="text/css">.Buzz{
+    margin-top: 20px;
+}
+.buzz-feed,.buzz-create{
+    width: 45vw;
+}
+
+@media screen and (max-width: 800px) {
+    .buzz-feed,.buzz-create{
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .side-nav{
+        display: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    .buzz-feed,.buzz-create{
+        width: 95vw;
+    }
+}
+@media screen and (max-width: 900px) {
+    .side-nav{
+        width: 2vw;
+    }
+}
+
+</style><style type="text/css">nav{
+    background-color: #3438a1;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-around;
+    vertical-align: center;
+    top:0;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    margin-bottom: 55px;
+}
+nav  a,nav >div{
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #3438a1;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+}
+nav a:active,nav >div:active{
+    color: #ffffff;
+    background-color: #030474;
+    text-decoration: none;
+}
+nav:last-child{
+    margin-right: 0;
+}
+header > section{
+    margin-top: 49px;
+    width: 100%;
+    background: url("/static/media/header background-1.4f42f050.jpeg") no-repeat center;
+    height: 200px;
+    display: flex;
+    vertical-align: center;
+}
+.banner-text{
+    font-family: Roboto;
+    color: #fff;
+    font-weight: bold;
+    word-wrap: break-spaces;
+    width: 600px;
+    padding-left: 130px;
+    margin-right: auto;
+}
+@media screen and (max-width: 500px) {
+    .banner-text{
+        font-size: 11px;
+        padding-left: 20px;
+        width: 200px;
+    }
+    header>section{
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    header>section{
+        height: 100px;
+    }
+}</style><style type="text/css">*{
+    box-sizing: border-box;
+}
+.form-group {
+    margin-bottom: 0;
+}
+.complaints{
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 15px auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.complaintId{
+    cursor: pointer;
+}
+.complaints:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.complaints-box-label
+{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #ccc;
+    padding-left: 25px;
+    font-size: 17px;
+    font-family: Roboto;
+}
+.form-group{
+    padding: 10px;
+}
+.row-no-gutters{
+    padding: 5px 15px;
+}
+.row-no-gutters div{
+    padding-right: 15px;
+}
+.row-no-gutters div:last-child{
+    padding-right:0;
+}
+textarea{
+    resize: none;
+}
+.file-upload > input[type="file"]{
+    display: none;
+}
+.file-upload label{
+    cursor: pointer;
+    width: 100px;
+    padding: 10px;
+}
+.file-upload i{
+    font-size:2em;
+}
+.file-upload label span{
+    padding-right: 10px;
+}
+.Resolved{
+    color: #00ff00;
+}
+.In-Progress{
+    color: #1a16af;
+}
+.PENDING{
+    color: #f00;
+}
+table td{
+    word-wrap: break-word;
+}</style><style type="text/css">.complaint-attachment img{
+    width:100%;
+    height: 50vh;
+}
+.modal{
+    word-wrap: break-word;
+    word-wrap: break-spaces;
+}</style><style type="text/css">.resolve{
+    width: 75%;
+    margin-top: 20px;
+    border-radius: 5px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    position: absolute;
+    right: 13%;
+}
+.resolve:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.resolve-label{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 30px;
+    background-color: #e7e7e7;
+    padding: 5px 0 5px 20px;
+}
+.table-responsive,.resolve-label{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.issueId{
+    text-decoration: underline;
+    color: #3a58ff;
+}
+.resolve td select{
+    background-color: transparent;
+    border: none;
+}
+
+
+@media screen and (max-width: 800px) {
+    .resolve{
+        width: 100%;
+        max-height: fit-content;
+        padding-left: 50px;
+        padding-right: 50px;
+        position: initial;
+    }
+}</style><style type="text/css">.profile{
+    width: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.profile img{
+    height: 70px;
+    border-radius: 50%;
+}
+.side-nav{
+    padding-top: 10px;
+    background-color: #cccccc;
+    margin-top: 20px;
+    margin-left: 100px;
+    width: 250px;
+    border-radius: 5px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 70px;
+}
+.side-nav:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.side-nav ul{
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-bottom: 0;
+}
+.side-nav ul li{
+    border-bottom: 1px solid #6a6a6a;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 15px;
+}
+.side-nav ul li:last-child{
+    border-bottom: none;
+}
+.side-nav ul li a{
+    text-decoration: none;
+}
+.side-nav ul li i{
+    font-size: 28px;
+    padding-right: 15px;
+}</style><style type="text/css">.settings{
+    border-radius: 5px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin: 20px auto;
+    padding: 10px;
+    position: absolute;
+    right: 50px;
+    text-align: center;
+}
+.settings:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.settings img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.image-upload{
+    padding: 10px;
+}
+.image-upload label{
+    padding: 20px;
+    cursor: pointer;
+    font-size: 2em;
+}
+
+@media screen and (max-width: 800px) {
+    .settings{
+        position: initial;
+    }
+}</style><style type="text/css">.Toastify__toast-container{z-index:9999;-webkit-transform:translateZ(9999px);position:fixed;padding:4px;width:320px;box-sizing:border-box;color:#fff}.Toastify__toast-container--top-left{top:1em;left:1em}.Toastify__toast-container--top-center{top:1em;left:50%;margin-left:-160px}.Toastify__toast-container--top-right{top:1em;right:1em}.Toastify__toast-container--bottom-left{bottom:1em;left:1em}.Toastify__toast-container--bottom-center{bottom:1em;left:50%;margin-left:-160px}.Toastify__toast-container--bottom-right{bottom:1em;right:1em}@media only screen and (max-width:480px){.Toastify__toast-container{width:100vw;padding:0;left:0;margin:0}.Toastify__toast-container--top-center,.Toastify__toast-container--top-left,.Toastify__toast-container--top-right{top:0}.Toastify__toast-container--bottom-center,.Toastify__toast-container--bottom-left,.Toastify__toast-container--bottom-right{bottom:0}.Toastify__toast-container--rtl{right:0;left:auto}}.Toastify__toast{position:relative;min-height:64px;box-sizing:border-box;margin-bottom:1rem;padding:8px;border-radius:1px;box-shadow:0 1px 10px 0 rgba(0,0,0,.1),0 2px 15px 0 rgba(0,0,0,.05);display:flex;justify-content:space-between;max-height:800px;overflow:hidden;font-family:sans-serif;cursor:pointer;direction:ltr}.Toastify__toast--rtl{direction:rtl}.Toastify__toast--default{background:#fff;color:#aaa}.Toastify__toast--info{background:#3498db}.Toastify__toast--success{background:#07bc0c}.Toastify__toast--warning{background:#f1c40f}.Toastify__toast--error{background:#e74c3c}.Toastify__toast-body{margin:auto 0;flex:1 1}@media only screen and (max-width:480px){.Toastify__toast{margin-bottom:0}}.Toastify__close-button{color:#fff;font-weight:700;font-size:14px;background:transparent;outline:none;border:none;padding:0;cursor:pointer;opacity:.7;transition:.3s ease;align-self:flex-start}.Toastify__close-button--default{color:#000;opacity:.3}.Toastify__close-button:focus,.Toastify__close-button:hover{opacity:1}@keyframes Toastify__trackProgress{0%{transform:scaleX(1)}to{transform:scaleX(0)}}.Toastify__progress-bar{position:absolute;bottom:0;left:0;width:100%;height:5px;z-index:9999;opacity:.7;background-color:hsla(0,0%,100%,.7);transform-origin:left}.Toastify__progress-bar--animated{animation:Toastify__trackProgress linear 1 forwards}.Toastify__progress-bar--controlled{transition:transform .2s}.Toastify__progress-bar--rtl{right:0;left:auto;transform-origin:right}.Toastify__progress-bar--default{background:linear-gradient(90deg,#4cd964,#5ac8fa,#007aff,#34aadc,#5856d6,#ff2d55)}@keyframes Toastify__bounceInRight{0%,60%,75%,90%,to{animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;transform:translate3d(3000px,0,0)}60%{opacity:1;transform:translate3d(-25px,0,0)}75%{transform:translate3d(10px,0,0)}90%{transform:translate3d(-5px,0,0)}to{transform:none}}@keyframes Toastify__bounceOutRight{20%{opacity:1;transform:translate3d(-20px,0,0)}to{opacity:0;transform:translate3d(2000px,0,0)}}@keyframes Toastify__bounceInLeft{0%,60%,75%,90%,to{animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;transform:translate3d(-3000px,0,0)}60%{opacity:1;transform:translate3d(25px,0,0)}75%{transform:translate3d(-10px,0,0)}90%{transform:translate3d(5px,0,0)}to{transform:none}}@keyframes Toastify__bounceOutLeft{20%{opacity:1;transform:translate3d(20px,0,0)}to{opacity:0;transform:translate3d(-2000px,0,0)}}@keyframes Toastify__bounceInUp{0%,60%,75%,90%,to{animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;transform:translate3d(0,3000px,0)}60%{opacity:1;transform:translate3d(0,-20px,0)}75%{transform:translate3d(0,10px,0)}90%{transform:translate3d(0,-5px,0)}to{transform:translateZ(0)}}@keyframes Toastify__bounceOutUp{20%{transform:translate3d(0,-10px,0)}40%,45%{opacity:1;transform:translate3d(0,20px,0)}to{opacity:0;transform:translate3d(0,-2000px,0)}}@keyframes Toastify__bounceInDown{0%,60%,75%,90%,to{animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;transform:translate3d(0,-3000px,0)}60%{opacity:1;transform:translate3d(0,25px,0)}75%{transform:translate3d(0,-10px,0)}90%{transform:translate3d(0,5px,0)}to{transform:none}}@keyframes Toastify__bounceOutDown{20%{transform:translate3d(0,10px,0)}40%,45%{opacity:1;transform:translate3d(0,-20px,0)}to{opacity:0;transform:translate3d(0,2000px,0)}}.Toastify__bounce-enter--bottom-left,.Toastify__bounce-enter--top-left{animation-name:Toastify__bounceInLeft}.Toastify__bounce-enter--bottom-right,.Toastify__bounce-enter--top-right{animation-name:Toastify__bounceInRight}.Toastify__bounce-enter--top-center{animation-name:Toastify__bounceInDown}.Toastify__bounce-enter--bottom-center{animation-name:Toastify__bounceInUp}.Toastify__bounce-exit--bottom-left,.Toastify__bounce-exit--top-left{animation-name:Toastify__bounceOutLeft}.Toastify__bounce-exit--bottom-right,.Toastify__bounce-exit--top-right{animation-name:Toastify__bounceOutRight}.Toastify__bounce-exit--top-center{animation-name:Toastify__bounceOutUp}.Toastify__bounce-exit--bottom-center{animation-name:Toastify__bounceOutDown}@keyframes Toastify__zoomIn{0%{opacity:0;transform:scale3d(.3,.3,.3)}50%{opacity:1}}@keyframes Toastify__zoomOut{0%{opacity:1}50%{opacity:0;transform:scale3d(.3,.3,.3)}to{opacity:0}}.Toastify__zoom-enter{animation-name:Toastify__zoomIn}.Toastify__zoom-exit{animation-name:Toastify__zoomOut}@keyframes Toastify__flipIn{0%{transform:perspective(400px) rotateX(90deg);animation-timing-function:ease-in;opacity:0}40%{transform:perspective(400px) rotateX(-20deg);animation-timing-function:ease-in}60%{transform:perspective(400px) rotateX(10deg);opacity:1}80%{transform:perspective(400px) rotateX(-5deg)}to{transform:perspective(400px)}}@keyframes Toastify__flipOut{0%{transform:perspective(400px)}30%{transform:perspective(400px) rotateX(-20deg);opacity:1}to{transform:perspective(400px) rotateX(90deg);opacity:0}}.Toastify__flip-enter{animation-name:Toastify__flipIn}.Toastify__flip-exit{animation-name:Toastify__flipOut}@keyframes Toastify__slideInRight{0%{transform:translate3d(110%,0,0);visibility:visible}to{transform:translateZ(0)}}@keyframes Toastify__slideInLeft{0%{transform:translate3d(-110%,0,0);visibility:visible}to{transform:translateZ(0)}}@keyframes Toastify__slideInUp{0%{transform:translate3d(0,110%,0);visibility:visible}to{transform:translateZ(0)}}@keyframes Toastify__slideInDown{0%{transform:translate3d(0,-110%,0);visibility:visible}to{transform:translateZ(0)}}@keyframes Toastify__slideOutRight{0%{transform:translateZ(0)}to{visibility:hidden;transform:translate3d(110%,0,0)}}@keyframes Toastify__slideOutLeft{0%{transform:translateZ(0)}to{visibility:hidden;transform:translate3d(-110%,0,0)}}@keyframes Toastify__slideOutDown{0%{transform:translateZ(0)}to{visibility:hidden;transform:translate3d(0,500px,0)}}@keyframes Toastify__slideOutUp{0%{transform:translateZ(0)}to{visibility:hidden;transform:translate3d(0,-500px,0)}}.Toastify__slide-enter--bottom-left,.Toastify__slide-enter--top-left{animation-name:Toastify__slideInLeft}.Toastify__slide-enter--bottom-right,.Toastify__slide-enter--top-right{animation-name:Toastify__slideInRight}.Toastify__slide-enter--top-center{animation-name:Toastify__slideInDown}.Toastify__slide-enter--bottom-center{animation-name:Toastify__slideInUp}.Toastify__slide-exit--bottom-left,.Toastify__slide-exit--top-left{animation-name:Toastify__slideOutLeft}.Toastify__slide-exit--bottom-right,.Toastify__slide-exit--top-right{animation-name:Toastify__slideOutRight}.Toastify__slide-exit--top-center{animation-name:Toastify__slideOutUp}.Toastify__slide-exit--bottom-center{animation-name:Toastify__slideOutDown}</style></head>
+  <body data-gr-c-s-loaded="true"><grammarly-extension class="_1KJtL" style="position: absolute; top: 0px; left: 0px; pointer-events: none;"><div data-grammarly-part="highlights" class="u_fNK" style="position: absolute; top: 0px; left: 0px;"><div style="box-sizing: content-box; top: 266px; left: 430.797px; width: 572.688px; height: 132px; position: relative; pointer-events: none; overflow: hidden; border: 0px; border-radius: 0px; padding: 0px; margin: 0px;"><div style="position: absolute; top: 0px; left: 0px;"><div style="height: 888px; width: 1924px;"></div><div style="position: absolute; top: 0px; left: 0px; height: 888px; width: 1924px;"></div></div></div></div><div data-grammarly-part="button" class="u_fNK" style="position: absolute; top: 0px; left: 0px;"><div style="box-sizing: content-box; top: 266px; left: 430.797px; width: 572.688px; height: 132px; position: relative; pointer-events: none; overflow: hidden; border: 0px; border-radius: 0px; padding: 0px; margin: 0px;"><div style="position: absolute; transform: translate(-100%, -100%); top: 124px; left: 560.688px; width: auto; height: auto; pointer-events: all;"><div style="display: flex; flex-direction: row;"><div style="position: relative;"><div class="_2vV1Z _3uWIx" style="position: absolute; right: 0px; top: 0px;"><div class="_2mmtW"><div class="-mjUa"><div class="_3dPLF _2_DQz" style="transform: scale(1);">0</div>&nbsp;Advanced issues found<div class="ll-S4">▲</div><div class="_3pmCo"></div></div></div></div><div class="Y3pRF _2lkte _1tE8n" style="position: absolute; right: 0px; top: 0px;"><div class="Y3pRF"></div></div></div><div class="_3-ITD"><div class="_5WizN aN9_b _1QzSN"><div class="_3YmQx"><div title="Protected by Grammarly" class="_3QdKe">&nbsp;</div></div></div></div></div></div></div></div></grammarly-extension>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="App"><div class="Toastify"><div class="Toastify__toast-container Toastify__toast-container--top-right" style="pointer-events: none;"></div></div><div class="dashboard"><header><nav><a aria-current="page" class="selected-item" title="News feed" href="http://localhost:3001/dashboard"><i class="far fa-newspaper"></i></a><a title="Complaints" href="http://localhost:3001/dashboard/complaints"><i class="fas fa-file-alt"></i></a><a title="Resolve" href="http://localhost:3001/dashboard/resolve"><i class="fas fa-bullhorn"></i></a><a title="Settings" href="http://localhost:3001/dashboard/settings"><i class="fas fa-user-cog"></i></a><div title="Logout"><i class="fas fa-sign-out-alt"></i></div></nav><section><h1 class="banner-text">POSTING YOUR THOUGHTS NEVER BEEN SO EASY..</h1></section></header><section class="side-nav col-xs-12 col-lg-4 col-sm-4 col-md-4 row"><div class="profile" title="User profile"><img alt="Avatar" src="./TTN BUZZ_files/x8soi65ij00ugwwqxibv.jpg" style="width: 100%;"></div><ul><li><a aria-current="page" class="selected-item" title="Buzz feed" href="http://localhost:3001/dashboard"><i class="far fa-newspaper"></i>BUZZ</a></li><li><a title="Complaints" href="http://localhost:3001/dashboard/complaints"><i class="fas fa-file-alt"></i>COMPLAINTS</a></li><li><a title="Resolve" href="http://localhost:3001/dashboard/resolve"><i class="fab fa-resolving"></i>RESOLVE</a></li><li><a title="Settings" href="http://localhost:3001/dashboard/settings"><i class="fas fa-user-cog"></i>SETTINGS</a></li></ul></section><div class="Buzz"><div class="buzz-create"><form enctype="multipart/form-data"><div class="form-group"><label for="Buzz create">CREATE BUZZ</label><textarea class="form-control textarea" name="buzz" id="buzz" required="" cols="10" rows="5" placeholder="Share your thoughts...." title="Type your buzz" spellcheck="false"></textarea><div class="row col-sm-12 post-control"><select name="category" id="category" class="form-control col-xs-12" title="Select Buzz Activity"><option value="Activity">ACTIVITY</option><option value="Lost and Found">LOST AND FOUND</option></select><div class="file-upload col-xs-12" title="Choose file "><label for="file-upload"><i class="far fa-image"></i></label><input type="file" name="attachment" id="file-upload" class="attachment"></div><button type="submit" class="btn btn-success col-xs-6" title="Upload your buzz"><i class="fas fa-paper-plane"></i> Post</button></div></div></form></div><div class="buzz-feed-container"><div><div class="buzz-feed container"><div class="buzz-header row"><div class="col-lg-2 col-xs-3 col-md-3 col-sm-3" title="User photo"><img src="./TTN BUZZ_files/x8soi65ij00ugwwqxibv.jpg" alt="" width="100%" height="100px"></div><div class="col-lg-8 col-xs-8 col-md-8 col-sm-8"><div class="col-lg-7 col-xs-8 col-sm-6 col-md-6"><label style="display: block;">Abhishek Yadav</label><span title="time of buzz creation">Today at 10:26 AM</span></div><div class="col-lg-4 col-lg-offset-1 col-md-3 col-md-offset-3 col-xs-4 col-sm-3 col-sm-offset-3 activity">Activity</div></div><div id="5d2ffbe6809bae3d18a5195a" class="col-lg-2 col-xs-1 col-sm-1 col-md-1 delete-btn"><button id="5d2ffbe6809bae3d18a5195a" type="button" class="close" title="Delete the buzz">×</button></div></div><section class="row buzz-content"><article><div class="display-text-group"><span class="displayed-text">rftgyuhjk </span></div></article></section><div class="buzz-footer row"><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="5d2ffbe6809bae3d18a5195a" title="Like"><i class="far fa-thumbs-up" id="5d2ffbe6809bae3d18a5195a"></i><span class="badge">0</span></div><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="5d2ffbe6809bae3d18a5195a" title="Dislike"><i class="far fa-thumbs-down " id="5d2ffbe6809bae3d18a5195a"></i><span class="badge">0</span></div><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="5d2ffbe6809bae3d18a5195a" title="Comment"><i class="far fa-comment-dots" id="5d2ffbe6809bae3d18a5195a"></i> <span class="badge" id="5d2ffbe6809bae3d18a5195a">0</span></div></div></div><div class="buzz-feed container"><div class="buzz-header row"><div class="col-lg-2 col-xs-3 col-md-3 col-sm-3" title="User photo"><img src="./TTN BUZZ_files/x8soi65ij00ugwwqxibv.jpg" alt="" width="100%" height="100px"></div><div class="col-lg-8 col-xs-8 col-md-8 col-sm-8"><div class="col-lg-7 col-xs-8 col-sm-6 col-md-6"><label style="display: block;">Abhishek Yadav</label><span title="time of buzz creation">Today at 10:25 AM</span></div><div class="col-lg-4 col-lg-offset-1 col-md-3 col-md-offset-3 col-xs-4 col-sm-3 col-sm-offset-3 activity">Activity</div></div><div id="5d2ffbdd809bae3d18a51959" class="col-lg-2 col-xs-1 col-sm-1 col-md-1 delete-btn"><button id="5d2ffbdd809bae3d18a51959" type="button" class="close" title="Delete the buzz">×</button></div></div><section class="row buzz-content"><article><div class="display-text-group"><span class="displayed-text">sdsadas </span></div></article></section><div class="buzz-footer row"><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="5d2ffbdd809bae3d18a51959" title="Like"><i class="far fa-thumbs-up" id="5d2ffbdd809bae3d18a51959"></i><span class="badge">0</span></div><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="5d2ffbdd809bae3d18a51959" title="Dislike"><i class="far fa-thumbs-down " id="5d2ffbdd809bae3d18a51959"></i><span class="badge">0</span></div><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="5d2ffbdd809bae3d18a51959" title="Comment"><i class="far fa-comment-dots" id="5d2ffbdd809bae3d18a51959"></i> <span class="badge" id="5d2ffbdd809bae3d18a51959">0</span></div></div></div><div class="buzz-feed container"><div class="buzz-header row"><div class="col-lg-2 col-xs-3 col-md-3 col-sm-3" title="User photo"><img src="./TTN BUZZ_files/x8soi65ij00ugwwqxibv.jpg" alt="" width="100%" height="100px"></div><div class="col-lg-8 col-xs-8 col-md-8 col-sm-8"><div class="col-lg-7 col-xs-8 col-sm-6 col-md-6"><label style="display: block;">Abhishek Yadav</label><span title="time of buzz creation">Today at 1:16 AM</span></div><div class="col-lg-4 col-lg-offset-1 col-md-3 col-md-offset-3 col-xs-4 col-sm-3 col-sm-offset-3 activity">Activity</div></div><div id="5d2f7b2b809bae3d18a51958" class="col-lg-2 col-xs-1 col-sm-1 col-md-1 delete-btn"><button id="5d2f7b2b809bae3d18a51958" type="button" class="close" title="Delete the buzz">×</button></div></div><section class="row buzz-content"><article><div class="display-text-group"><span class="displayed-text">sadfsdf </span></div></article><div class="buzz-attachment" style="background: url(&quot;https://res.cloudinary.com/ttnbuzz/image/upload/v1563392810/bweyfblpyanrz1bsaf9u.png&quot;) center center / contain no-repeat;"></div></section><div class="buzz-footer row"><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="5d2f7b2b809bae3d18a51958" title="Like"><i class="far fa-thumbs-up" id="5d2f7b2b809bae3d18a51958"></i><span class="badge">0</span></div><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="5d2f7b2b809bae3d18a51958" title="Dislike"><i class="far fa-thumbs-down " id="5d2f7b2b809bae3d18a51958"></i><span class="badge">0</span></div><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="5d2f7b2b809bae3d18a51958" title="Comment"><i class="far fa-comment-dots" id="5d2f7b2b809bae3d18a51958"></i> <span class="badge" id="5d2f7b2b809bae3d18a51958">0</span></div></div></div><div class="buzz-feed container"><div class="buzz-header row"><div class="col-lg-2 col-xs-3 col-md-3 col-sm-3" title="User photo"><img src="./TTN BUZZ_files/x8soi65ij00ugwwqxibv.jpg" alt="" width="100%" height="100px"></div><div class="col-lg-8 col-xs-8 col-md-8 col-sm-8"><div class="col-lg-7 col-xs-8 col-sm-6 col-md-6"><label style="display: block;">Abhishek Yadav</label><span title="time of buzz creation">Today at 1:16 AM</span></div><div class="col-lg-4 col-lg-offset-1 col-md-3 col-md-offset-3 col-xs-4 col-sm-3 col-sm-offset-3 activity">Activity</div></div><div id="5d2f7b1b809bae3d18a51957" class="col-lg-2 col-xs-1 col-sm-1 col-md-1 delete-btn"><button id="5d2f7b1b809bae3d18a51957" type="button" class="close" title="Delete the buzz">×</button></div></div><section class="row buzz-content"><article><div class="display-text-group"><span class="displayed-text">sfdsfs </span></div></article></section><div class="buzz-footer row"><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="5d2f7b1b809bae3d18a51957" title="Like"><i class="far fa-thumbs-up" id="5d2f7b1b809bae3d18a51957"></i><span class="badge">0</span></div><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="5d2f7b1b809bae3d18a51957" title="Dislike"><i class="far fa-thumbs-down " id="5d2f7b1b809bae3d18a51957"></i><span class="badge">0</span></div><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="5d2f7b1b809bae3d18a51957" title="Comment"><i class="far fa-comment-dots" id="5d2f7b1b809bae3d18a51957"></i> <span class="badge" id="5d2f7b1b809bae3d18a51957">0</span></div></div></div><div class="buzz-feed container"><div class="buzz-header row"><div class="col-lg-2 col-xs-3 col-md-3 col-sm-3" title="User photo"><img src="./TTN BUZZ_files/x8soi65ij00ugwwqxibv.jpg" alt="" width="100%" height="100px"></div><div class="col-lg-8 col-xs-8 col-md-8 col-sm-8"><div class="col-lg-7 col-xs-8 col-sm-6 col-md-6"><label style="display: block;">Abhishek Yadav</label><span title="time of buzz creation">Today at 1:16 AM</span></div><div class="col-lg-4 col-lg-offset-1 col-md-3 col-md-offset-3 col-xs-4 col-sm-3 col-sm-offset-3 activity">Activity</div></div><div id="5d2f7afb809bae3d18a51956" class="col-lg-2 col-xs-1 col-sm-1 col-md-1 delete-btn"><button id="5d2f7afb809bae3d18a51956" type="button" class="close" title="Delete the buzz">×</button></div></div><section class="row buzz-content"><article><div class="display-text-group"><span class="displayed-text">sdfsd </span></div></article><div class="buzz-attachment" style="background: url(&quot;https://res.cloudinary.com/ttnbuzz/image/upload/v1563392763/mewowdgoorslivzcvrdy.png&quot;) center center no-repeat;"></div></section><div class="buzz-footer row"><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="5d2f7afb809bae3d18a51956" title="Like"><i class="far fa-thumbs-up" id="5d2f7afb809bae3d18a51956"></i><span class="badge">0</span></div><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="5d2f7afb809bae3d18a51956" title="Dislike"><i class="far fa-thumbs-down " id="5d2f7afb809bae3d18a51956"></i><span class="badge">0</span></div><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="5d2f7afb809bae3d18a51956" title="Comment"><i class="far fa-comment-dots" id="5d2f7afb809bae3d18a51956"></i> <span class="badge" id="5d2f7afb809bae3d18a51956">0</span></div></div></div><div class="buzz-feed container"><div class="buzz-header row"><div class="col-lg-2 col-xs-3 col-md-3 col-sm-3" title="User photo"><img src="./TTN BUZZ_files/x8soi65ij00ugwwqxibv.jpg" alt="" width="100%" height="100px"></div><div class="col-lg-8 col-xs-8 col-md-8 col-sm-8"><div class="col-lg-7 col-xs-8 col-sm-6 col-md-6"><label style="display: block;">Abhishek Yadav</label><span title="time of buzz creation">Today at 1:15 AM</span></div><div class="col-lg-4 col-lg-offset-1 col-md-3 col-md-offset-3 col-xs-4 col-sm-3 col-sm-offset-3 activity">Activity</div></div><div id="5d2f7abf809bae3d18a51955" class="col-lg-2 col-xs-1 col-sm-1 col-md-1 delete-btn"><button id="5d2f7abf809bae3d18a51955" type="button" class="close" title="Delete the buzz">×</button></div></div><section class="row buzz-content"><article><div class="display-text-group"><span class="displayed-text">sdfsd </span></div></article><div class="buzz-attachment" style="background: url(&quot;https://res.cloudinary.com/ttnbuzz/image/upload/v1563392702/s3ylfzcfve12jcllkkq8.png&quot;) center center / contain no-repeat;"></div></section><div class="buzz-footer row"><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="5d2f7abf809bae3d18a51955" title="Like"><i class="far fa-thumbs-up" id="5d2f7abf809bae3d18a51955"></i><span class="badge">0</span></div><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="5d2f7abf809bae3d18a51955" title="Dislike"><i class="far fa-thumbs-down " id="5d2f7abf809bae3d18a51955"></i><span class="badge">0</span></div><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="5d2f7abf809bae3d18a51955" title="Comment"><i class="far fa-comment-dots" id="5d2f7abf809bae3d18a51955"></i> <span class="badge" id="5d2f7abf809bae3d18a51955">0</span></div></div></div><div class="loader">Loading ...</div></div> </div></div></div></div></div>
+    <script src="./TTN BUZZ_files/jquery.min.js"></script>
+    <script src="./TTN BUZZ_files/bootstrap.min.js"></script>
+  <script src="./TTN BUZZ_files/bundle.js"></script><script src="./TTN BUZZ_files/1.chunk.js"></script><script src="./TTN BUZZ_files/main.chunk.js"></script><script src="./TTN BUZZ_files/main.2f39a6cb20c3ca774769.hot-update.js"></script>
+
+</body><grammarly-popups class="_1KJtL"><div></div></grammarly-popups><div><div class="gr_-editor gr-iframe-first-load" style="display: none;"><div class="gr_-editor_back"></div><iframe class="gr_-ifr gr-_dialog-content" src="./TTN BUZZ_files/saved_resource.html"></iframe></div></div><grammarly-card style=""><div></div></grammarly-card><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span><grammarly-mirror><div style="border: 0px transparent; margin: 0px; padding: 6px 12px; font: 400 17px/24.2857px Roboto; direction: ltr; text-align: left; text-shadow: none; text-indent: 0px; letter-spacing: normal; word-break: normal; overflow-wrap: break-word; word-spacing: 0px; writing-mode: horizontal-tb; white-space: pre-wrap; vertical-align: baseline; clear: none; box-sizing: content-box; width: 548.688px; height: 120px; position: fixed; top: 0px; left: 0px; background: transparent; pointer-events: none; overflow: hidden; color: transparent; z-index: -2147483648; visibility: hidden;">
+srwrwerwrrrrrrrrrsrwrwerwrrrrrrrrrsrwrwerwrrrrrrrrrsrwrwerwrrrrrrrrrsrwrwerwrrrrrrrrrsrwrwerwrrrrrrrrrsrwrwerwrrrrrrrrrsrwrwerwrrrrrrrrrsrwrwerwrrrrrrrrrsrwrwerwrrrrrrrrrsrwrwerwrrrrrrrrrsrwrwerwrrrrrrrrrsrwrwerwrrrrrrrrrsrwrwerwrrrrrrrrrsrwrwerwrrrrrrrrrsrwrwerwrrrrrrrrrsrwrwerwrrrrrrrrrsrwrwerwrrrrrrrrrsrwrwerwrrrrrrrrr
+
+</div></grammarly-mirror></html>

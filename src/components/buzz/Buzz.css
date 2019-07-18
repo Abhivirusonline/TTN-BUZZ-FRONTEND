@@ -1,5 +1,8 @@
+.Buzz{
+    margin-top: 20px;
+}
 .buzz-feed,.buzz-create{
-    width: 50vw;
+    width: 45vw;
 }
 
 @media screen and (max-width: 800px) {

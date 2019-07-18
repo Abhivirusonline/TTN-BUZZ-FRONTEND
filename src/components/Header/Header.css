@@ -32,8 +32,8 @@ nav:last-child{
 header > section{
     margin-top: 49px;
     width: 100%;
-    background: url("../../Assests/header background.jpeg") no-repeat center ;
-    height: 250px;
+    background: url("../../Assests/header background-1.jpeg") no-repeat center;
+    height: 200px;
     display: flex;
     vertical-align: center;
 }
@@ -42,6 +42,23 @@ header > section{
     color: #fff;
     font-weight: bold;
     word-wrap: break-spaces;
-    width: 500px;
-    padding-left: 100px;
+    width: 600px;
+    padding-left: 130px;
+    margin-right: auto;
+}
+@media screen and (max-width: 500px) {
+    .banner-text{
+        font-size: 11px;
+        padding-left: 20px;
+        width: 200px;
+    }
+    header>section{
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    header>section{
+        height: 100px;
+    }
 }
